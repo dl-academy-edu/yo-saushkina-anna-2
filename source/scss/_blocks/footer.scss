@@ -1,10 +1,234 @@
 /*
   Код ниже нужно удалить, он добавлен просто для примера
 */
+/* ___________footer */
 .footer {
-  background-color: #151515;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-  height: 100px;
+  background-color: #434343;
+  width: 100%;
+  min-height: 556px;
 }
+
+.footer__menuColumn {
+  max-width: 384px;
+  width: 100%;
+  margin: 100px 0px 0 0px;
+}
+
+.connect {
+  max-width: 380px;
+  margin-left: 30px; 
+}
+
+.footer__menuColumn-header {
+  color: #AAAAAA;
+  border-bottom: 1px solid #666666;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__menuColumn-list li {
+  padding-bottom: 15px;
+}
+
+
+/* _____________________connect  */
+
+.footer__connectColumn-form {
+  display: flex;
+}
+
+.footer__connectColumn-form-button {
+  padding-left: 10px;
+}
+
+.footer__menuColumn-list-link{
+  color: #FFFFFF; 
+}
+
+
+/* ____________________UI */
+.footer__menuColumn-list-link:hover {
+  opacity: 0.5;
+}
+
+.footer__menuColumn-list-link:active {
+  opacity: 0.2;
+}
+
+
+/* ___________customer information  */
+.customer-info {
+  max-width: 380px;
+  margin-left: 30px;
+  /* margin-right: 20px; */
+}
+
+.footer__connectColumn-form-email {
+  color: #EBEBEB;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  display: flex;
+  width: 300px;
+  border: none;
+  background-color: #666666;
+  padding-left: 15px;
+}
+
+.footer__connectColumn-form-email::placeholder {
+  color:#EBEBEB;
+}
+
+.footer__connectColumn-socialsList {
+  display: flex;
+  margin-top: 24px;
+}
+
+.footer__connectColumn-form-email:hover {
+  border: 
+  #FFFDFD solid 1px;
+  cursor: pointer;
+}
+
+/* _________________соцсети */
+.footer__connectColumn-socialsList-item {
+  margin-right: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 50%;
+  background: #666666;
+}
+
+svg path {
+  fill:inherit;
+  stroke:inherit;
+  stroke-width:inherit;
+}
+
+.footer__connectColumn-socialsList-item:hover {
+ opacity: 0.5;
+}
+
+.footer__connectColumn-socialsList-item:active {
+  opacity: 0.25;
+}
+
+/* ________________металиния */
+
+.footer__rating {
+  display: flex;
+  border-top: 1px solid #666666;
+  margin-top: 13px;
+  justify-content: space-between;
+  padding-top: 22px;
+  align-items: center;
+}
+
+/* _______________stars style */
+
+input[type="radio"] {  
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+label[for]:hover {
+  cursor: pointer;
+}
+
+.rating {
+  min-width: 150px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.rating fieldset:hover, 
+.rating fieldset:active {
+  color: #C29974;
+  cursor: pointer;
+}
+
+.rating fieldset {
+  min-width: 100px;
+  border: none;
+  padding: 0 0;
+  margin-left: 26px;
+  margin: 0 0;
+  color: #FFFFFF;
+}
+
+.rating-label {
+  padding-top: 5px;
+  padding-right: 2px;
+}
+
+.rating-input,
+.rating-label {
+  float: right;
+}
+
+.mar {
+  margin-left: 26px;
+}
+
+.rating-label:after {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  padding-right: 18px;
+  background-image: url(../img/icons/star.svg);
+  background-repeat:no-repeat;
+}
+
+.rating-input:focus + .rating-label:after,
+.rating-input:hover + .rating-label:after {
+  text-shadow: 0 0 1px #000;
+}
+.rating-input:focus ~ .rating-label:after,
+.rating-input:hover ~ .rating-label:after {
+  background-image: url(../img/icons/brown-star.svg);
+  transition: 0.2s;
+}
+
+.rating-input:checked ~ .rating-label:after {
+  background-image: url(../img/icons/gold-star.svg);
+}
+
+
+/* ____________________copyright */
+.footer__rating-meta-copyright {
+  color: #ffffff;
+  margin: 0 0;
+  margin-left: 45px;
+  margin-bottom: 4px;
+
+}
+.footer__rating-meta {
+  display: flex;
+  margin: 0 0;
+  margin-right: 80px;
+}
+.footer__rating-meta-link {
+ color: #A2A2A2; 
+ margin-bottom: 2px;
+}
+
+
+.footer__rating-meta-link:hover,
+.footer__rating-meta-link:active {
+  text-decoration: underline;
+}
+

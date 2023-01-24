@@ -15,46 +15,417 @@
 /*
   Import all other blocks
 */
+
 @import "_blocks/container";
+@import "_blocks/header";
 @import "_blocks/footer";
+@import "_blocks/popup";
+@import "_blocks/link";
+@import "_blocks/pagination";
+@import "_blocks/breadcrumbs";
 
-/*
-  Ниже пример подключения других блоков
+@import "contact";
+@import "catalog";
+@import "toys";
+@import "blog";
 
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
-  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
 
-  Для именования селекторов давайте придерживаться стиля two dashes
-  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
 
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
-
-.coming-soon {
-  color: $color-text;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
-
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
+/* banner */
+.banner {
     width: 100%;
-  }
-}
+    height: 412px;
+ }
+ .banner__wrapper {
+     display: flex;
+     background-color: #EEE4DB;
+     margin-top: 130px;
+     height: 412px;
+ }
+ .banner__text-img {
+     position:relative;
+     bottom: 90px;
+     right: 100px;
+     width: 636px;
+     height: 489px;
+ }
+ 
+ .banner__slider {
+     padding: 18px 44px 0 28px;
+ 
+ }
+ 
+ .banner__header {
+    display: none; 
+ }
+ .banner__slider-Num {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 200;
+     font-size: 60px;
+     line-height: 74px;
+     color: #1E06060D;
+ }
+ 
+ .slides{
+     line-height: 12px;
+     padding-left: 2px;
+ }
+ 
+ 
+ .switch {
+     background-color: #D6CAC2;
+     width: 32px;
+     height: 3px;
+     border: none;
+ }
+ 
+ .switch:hover {
+     cursor: pointer;
+     background-color: #725F5B;
+ }
+ 
+ .active,
+ .switch:active {
+     background-color: rgba(30, 6, 6, 0.6);
+ }
+ 
+ 
+ .navigation .bar {
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all .5s ease;
+     transition: all .5s ease;
+ }
+ 
+ input[name="button"] {
+     visibility: hidden;
+ }
+    
+ .banner__text-img {
+     position: relative;
+     z-index: 2;
+ }
+ 
+ .banner__slider-buttons-switch:hover {
+     background-color: #725F5B;
+ }
+ 
+ .banner__text-title{
+     font-family: 'Montserrat';
+     font-weight: 700;
+     font-size: 40px;
+     line-height: 110%;
+     padding: 90px 5px 18px 0;
+ }
+ 
+ .banner__text-subtitle{
+     font-family: 'Crimson Text';
+     font-style: italic;
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 26px;
+     padding-bottom: 21px; 
+ }
+ 
+ .banner__subtitle {
+     position: relative;
+     text-align: center;
+     bottom: 42px;
+     font-weight: 700;
+     color: #FFFFFF;
+ 
+     background-color: #C29974;
+     padding: 14px;
+     z-index: 2;
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-size: 12px;
+     line-height: 14px;
+     text-transform: uppercase;
+ }
+ 
+ 
+ /* category-products */
+ .category-products {
+     width: 1180px;
+ }
+ .category-products__header {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 38px;
+     line-height: 46px;
+     text-transform: uppercase;
+     color: #1E0606; 
+     padding: 90px 0 30px;
+ }
+ 
+ .category-products__list {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .category-products__item {
+     position: relative;
+ }
+ .apparel {
+     background-color: #DBE4DB;
+ }
+ .holiday {
+     background-color: #EADDD3;
+ }
+ .toys {
+     background-color: #F8F2DA;
+ }
+ .accessories {
+     background-color: #D5D4E1;
+ }
+ 
+ .category-products__item-text {
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 26px;
+     line-height: 32px;
+     text-transform: uppercase;
+     color: #FFFFFF;
+     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     max-width: 190px;
+     text-align: center;
+     z-index: 2;
+ }
+ 
+ .category-products__item-text:hover {
+     text-decoration-line: underline;
+ }
+ 
+ .category-products__navigation {
+     margin: 0 0;
+     padding-top: 30px;
+     display: flex;
+     width: 680px;
+ }
+ 
+ /* ___________________стрелки */
+ 
+ .category-products__navigation-buttonLeft,
+ .category-products__navigation-buttonRight {
+     border: none;
+     background-color: transparent;
+     padding: 0 5px 0 0;
+     margin: 0 0;
+ }
+ 
+ .category-products__navigation-buttonLeft:before,
+ .category-products__navigation-buttonRight:before{
+     content: '';
+     background-repeat: no-repeat;
+     width: 38px;
+     height: 38px;
+     cursor: pointer;
+     display: inline-block;
+     text-align: center;
+     background-position: center;
+     background-color: rgba(112, 187, 220, 0.2);
+ }
+ 
+ .category-products__navigation-buttonLeft:before {
+     background-image: url(../img/icons/blue-arrow-left.svg);
+ }
+ 
+ .category-products__navigation-buttonLeft:hover:before {
+     background-image: url(../img/icons/arrow-hover.svg);
+     transform: scaleX(-1);
+ }
+ 
+ .category-products__navigation-buttonLeft:active:before {
+     background-image: url(../img/icons/arrow-active.svg);
+     transform: scaleX(-1);
+ }
+ 
+ .category-products__navigation-buttonRight:before {
+     background-image: url(../img/icons/blue-arrow-right.svg);
+ }
+ 
+ .category-products__navigation-buttonRight:hover:before {
+     background-image: url(../img/icons/arrow-hover.svg);
+ }
+ 
+ .category-products__navigation-buttonRight:active:before {
+     background-image: url(../img/icons/arrow-active.svg);
+ }
+ 
+ .category-products__navigation-buttonRight:before{
+     background-image: url(../img/icons/blue-arrow-right.svg);
+ }
+ 
+ .category-products__navigation-text {
+     width: 600px;
+     padding-left: 14px;
+     margin: 0 0;
+ }
+ 
+ /* delivery */
+ .delivery {
+     display: flex;
+     padding-top: 90px;
+     justify-content: flex-start;
+ }
+ 
+ .delivery__img {
+     margin: 0 0;
+ }
+ .delivery__info {
+     margin-left: 60px;
+     width: 535px;
+ }
+ 
+ .delivery__header {
+     font-family: 'Montserrat';
+     font-weight: 700;
+     font-size: 38px;
+     line-height: 46px;
+     text-transform: uppercase;
+     padding-top: 30px;
+     padding-bottom: 6px;
+     padding-left: 60px;
+ }
+ .delivery__menuList {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+ 
+ .delivery-page {
+     max-width: 326px;
+     height: 56px;
+     display: flex;
+ }
+ 
+ .delivery__menuList-button {
+     font-family: 'Crimson Text';
+     font-style: italic;
+     font-weight: 400;
+     font-size: 26px;
+     line-height: 34px;
+     padding: 9px 180px 8px 60px;
+     color: #1E0606;
+     margin: 0 0;
+ }
+ 
+ .active-btn,
+ .delivery-page:active {
+     background-color: rgba(112, 187, 220, 0.2);
+     font-weight: 700;
+     opacity: 0.7;
+ }
+ 
+ .delivery-page:hover {
+     background-color: rgba(112, 187, 220, 0.2);
+ }
+ 
+ .delivery__menuList-button:hover {
+     font-weight: 700;
+ }
+ 
+ .delivery__text {
+     padding-top: 16px;
+     padding-left: 60px;
+ }
+ 
+ .delivery__link {
+     position: relative;
+     top: 34px;
+     left: 60px;
+ }
+ 
+ 
+ /* companies */
+ .companies__header {
+     display: none;
+ }
+ .companies__list {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 115px;
+     margin-top: 90px;
+ }
+ 
+ 
+ /* infoDesignLifeKids */
+ 
+ 
+ .infoDesignLifeKids {
+     margin: 0 0;
+     margin-right: 57px;
+     width: 543px;
+     background-color: #E1F0F7;
+     height: 100%;
+     padding-bottom: 35px;
+ }
+ 
+ .infoDesignLifeKids__header, .infoContacts__header{
+     font-family: 'Montserrat';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 38px;
+     line-height: 46px;
+     text-transform: uppercase;
+     padding-left: 30px;
+     margin-top: -25px;
+ }
+ 
+ .infoDesignLifeKids__subtitle {
+     font-family: 'Crimson Text';
+     font-style: italic;
+     font-weight: 400;
+     font-size: 26px;
+     line-height: 34px;
+     padding-bottom: 10px;
+     padding-left: 30px;
+     padding-top: 10px;
+ }
+ 
+ .desc {
+     max-width: 510px;
+     margin: 0 0;
+     padding-left: 30px;
+     margin-bottom: 29px;
+ }
+ 
+ .buy {
+     margin-left: 30px;
+ }
+ 
+ 
+ /* infoContacts */
+ .infoContacts {
+    margin: 0 0;
+    max-width: 483px;
+ }
+ 
+ 
+ .infoContacts__header {
+    margin-bottom: -22px; 
+ }
+ 
+ .infoContacts__text {
+     margin: 0 0;
+     width: 543px;
+     padding: 41px 30px 103px 30px;
+     background-color: #E1F0F7;
+ }
+ 
+ .infoContacts__map {
+     padding-left: 30px;
+     margin-top: -72px; 
+     margin-bottom: 33px;
+ }
+ 
+ 
+ 

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Blog</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main>
+        <section class="breadcrumbs container">
+            <h2 class="breadcrumbs__header">Blog</h2>
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item arrow"><a href="/index.html">Home</a></li>
+                <li class="breadcrumbs__list-item active-page"><a href="/pages/blog.html">Blog</a></li> 
+            </ul>
+        </section>
+        <section class="blog container">
+            <h2 class="visually-hidden">blog</h2>
+            <ul class="blog__list">
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-1-chaotic-lego.jpg" alt="Chaotic lego" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Top 5 fastest growing it service companies in philly</a>
+                    <p class="blog__list-post-text">Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.</p>
+                </li>
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-2-toys-in-pajamas.jpg" alt="Toys in pajamas" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Best financial</a>
+                    <p class="blog__list-post-text">Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.</p>
+                </li>
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-3-structured-lego.jpg" alt="Structured lego" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Company logo or brand identity: which one is more important? brand identity</a>
+                    <p class="blog__list-post-text">To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.</p>
+                </li>
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-4-buzz-lightyear.jpg" alt="Buzz lightyear" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Best financial</a>
+                    <p class="blog__list-post-text">Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.</p>
+                </li>
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-5-rapunzel.jpg" alt="Rapunzel" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Company logo or brand identity: which one is more important? brand identity</a>
+                    <p class="blog__list-post-text">To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.</p>
+                </li>
+                <li class="blog__list-post">
+                    <img class="blog__list-post-img" src="/img/blog-6-game-dice.jpg" alt="Game dice" width="380" height="220">
+                    <p class="blog__list-post-date">23rd August 2018</p>
+                    <a href="#" class="blog__list-post-link">Top 5 fastest growing it service companies in philly</a>
+                    <p class="blog__list-post-text">Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.</p>
+                </li>
+            </ul>
+            @@include('blocks/pagination.html')
+        </section>
+    </main>
+      @@include('blocks/footer.html')
+
+    <script src="js/app.js" defer></script>
+
+  </body>
+</html>

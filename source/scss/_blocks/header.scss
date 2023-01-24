@@ -1,0 +1,74 @@
+/* header */
+.header {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+/* __UI */
+.header__logo:hover,
+.header__list > li:hover,
+.header__contact-search:hover,
+.header__contact-link:hover
+ {
+    opacity: 0.5;
+}
+
+.header__logo:active,
+.header__list > li:active,
+.header__contact-search:active,
+.header__contact-link:active{
+    opacity: 0.25;
+}
+
+/* nav */
+
+.header__nav {
+    flex-grow: 2;
+}
+.header__list {
+    padding-left: 50px;
+    display: flex;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+}
+
+.header__list-item, .header__contact-link {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    color:  #1E0606;
+}
+.header__list-item {
+    margin: 10px;
+}
+
+
+.header__contact-search {
+    background: none;
+    border: none;
+    padding: 0;
+    padding-right: 3px;
+    padding-top: 4px;
+ 
+}
+
+.header__contact-search:before {
+    content: '';
+    background-image: url(../img/icons/search.svg);
+    background-repeat: no-repeat;
+    display: block;
+    border: none;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 23px;
+}
+
+.header__contact-link {
+    font-weight: 700;
+}
