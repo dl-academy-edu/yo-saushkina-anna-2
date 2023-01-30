@@ -25,26 +25,26 @@
     @@include('blocks/header.html')
     <main>
       <section class="banner container">
-          <h2 class="banner__hidden-header">banner</h2>
-          <div class="banner-wrapper">
+          <h2 class="visually-hidden">banner</h2>
+          <div class="banner__wrapper">
               <p class="banner__header">Slider</p>
-              <div class="banner__slider">
-                  <span class="banner__slider-Num">01</span>
-                  <ul class="slides"> 
-                      <li class="slider-switch"><button class="switch active" type="button" aria-label="switch first slide"></button></li>
-                      <li class="slider-switch"><button class="switch" type="button" aria-label="switch second slide"></button></li>
-                      <li class="slider-switch"><button class="switch" type="button" aria-label="switch third slide"></button></li>
-                      <li class="slider-switch"><button class="switch" type="button" aria-label="switch fouth slide"></button></li>
+              <div class="slider">
+                  <span class="slider__num">01</span>
+                  <ul class="slider__list"> 
+                      <li><button class="slider__switch active" type="button" aria-label="switch first slide"></button></li>
+                      <li><button class="slider__switch" type="button" aria-label="switch second slide"></button></li>
+                      <li><button class="slider__switch" type="button" aria-label="switch third slide"></button></li>
+                      <li><button class="slider__switch" type="button" aria-label="switch fouth slide"></button></li>
                   </ul>
               </div>
-              <div class="banner__text">
-                  <h1 class="banner__text-title">THE OOH NOO COLLECTION</h1>
-                  <p class="banner__text-subtitle">Designed in Slovenia</p>
-                  <button class="link-btn btn__js" type="button" aria-label="open modal window">EXPLORE NOW</button>
+              <div class="banner-text">
+                  <h1 class="banner-text__title">THE OOH NOO COLLECTION</h1>
+                  <p class="banner-text__subtitle">Designed in Slovenia</p>
+                  <button class="banner-text__button link-btn btn__js" type="button" aria-label="open modal window">EXPLORE NOW</button>
               </div>
-              <img class="banner__text-img" src="./img/monster.png" alt="monster" width="636" height="489">
+              <img class="banner-text__img" src="./img/monster.png" alt="monster" width="636" height="489">
           </div>
-          <p class="banner__subtitle">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+          <p class="banner-subtitle">Free (continental) USA shipping on all orders of $100 USD or more!</p>
       </section>
       <section class="category-products container">
         <h2 class="category-products__header">Category Products</h2>
@@ -86,7 +86,7 @@
           <img class="delivery__img" src="./img/delivery-woman.png" alt="delivery woman" width="480" height="559">
           <div class="delivery__info">
               <h3 class="delivery__header">Delivery</h3>
-              <ul class="delivery__menuList">
+              <ul class="delivery__menu">
                   <li class="delivery-page"><a class="delivery__menuList-button" href="#">Delivery</a></li>
                   <li class="delivery-page"><a class="delivery__menuList-button" href="#">Guarantee</a></li>
                   <li class="delivery-page"><a class="delivery__menuList-button" href="#">Credit</a></li>
