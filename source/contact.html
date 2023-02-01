@@ -25,21 +25,19 @@
     @@include('blocks/header.html')
   
     <main>
-        <section class="breadcrumbs container">
-            <h2 class="breadcrumbs__header">Contact us</h2>
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__list-item arrow"><a href="/index.html">Home</a></li>
-                <li class="breadcrumbs__list-item active-page"><a href="/pages/сatalog.html">Contact Us</a></li> 
-            </ul>
-        </section>
+      @@include('blocks/breadcrumbs.html',{
+        "header" : "Contact us",
+        "active-name": "Contact Us",
+        "active-link": "/contact.html",
+      })
 
         <section class="contact container">
             <h1 class="contact__header">Contact Us</h1>
             @@include('blocks/popup.html')
             <div class="contact__form-text">
-                <p class="text">Our support team are on-hand to assist with any issues you are experiencing.</p>
-                <p class="text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
-                <p class="contactForm__text-waitingToHelp">An expert is waiting to help you!</p>
+                <p class="contact__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p class="contact__text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <p class="contact__offer">An expert is waiting to help you!</p>
             </div>
         </section>
     </main>

@@ -25,16 +25,16 @@
   <body>
     @@include('blocks/header.html')
     <main>
-        <section class="breadcrumbs container">
-            <h2 class="breadcrumbs__header">Category Products</h2>
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__list-item"><a class="home" href="/index.html">Home</a></li>
-                <li class="breadcrumbs__list-item catalog"><a href="/pages/сatalog.html">Catalog</a></li>
-            </ul>
-        </section>
-        <section class="categoryProducts container">
+      @@include('blocks/breadcrumbs.html',{
+        "header" : "category products",
+        "active-name": "Catalog",
+        "active-link": "/catalog.html",
+        "active-second-page": "breadcrumbs__item--active-page",
+        "second-link": "",
+      })
+        <section class="category-products catalog container">
             <h2 class="visually-hidden">products</h2>
-            <ul class="categoryProducts__list left-line">
+            <ul class="category-products__list catalog__left-line">
                 @@include('blocks/product.html',{
                     "img": "img/apparel-kids.jpg",
                     "text": "apparel kids",
@@ -55,30 +55,32 @@
                     "link": "../toys.html",
                   })
             </ul>
-            <ul class="categoryProducts__list right-line">
+            <ul class="category-products__list catalog__right-line">
                 @@include('blocks/product.html',{
                     "img": "img/accessories.jpg",
                     "text": "ACCESSORIES",
                     "alt": "accessories",
                     "modify": "accessories",
                   })
-                <li class="categoryProducts__list-item sale">
-                    <img src="../img/sale.jpg" alt="sale" width="280" height="270">
-                    <a class="categoryProducts__list-item-text" href="#">
-                    SALE</a>
-                </li>
-                <li class="categoryProducts__list-item adults">
-                    <img src="../img/apparel-adults.jpg" alt="apparel adults" width="280" height="270">
-                    <a class="categoryProducts__list-item-text" href="#">
-                        APPAREL ADULTS</a>
-                </li>
+                  @@include('blocks/product.html',{
+                    "img": "img/sale.jpg",
+                    "text": "sale",
+                    "alt": "sale",
+                    "modify": "sale",
+                  })
+                  @@include('blocks/product.html',{
+                    "img": "img/apparel-adults.jpg",
+                    "text": "ACCESSORIES",
+                    "alt": "apparel adults",
+                    "modify": "adults",
+                  })
             </ul>
         </section>
-        <section class="product-desc container">
-            <h2 class="product-desc__header">Product Description</h2>
-            <p class="product-desc__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
-            <p class="product-desc__text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
-            <p class="product-desc__text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+        <section class="catalog__product-desc container">
+            <h2 class="catalog__desc-header">Product Description</h2>
+            <p class="catalog__desc-text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+            <p class="catalog__desc-text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+            <p class="catalog__desc-text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
         </section>
     </main>   
     @@include('blocks/footer.html')

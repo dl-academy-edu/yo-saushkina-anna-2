@@ -20,23 +20,31 @@
 @import "_blocks/header";
 @import "_blocks/footer";
 @import "_blocks/popup";
-@import "_blocks/link";
+@import "_blocks/link-btn";
 @import "_blocks/pagination";
 @import "_blocks/breadcrumbs";
+@import "_blocks/prod";
 
 @import "contact";
 @import "catalog";
 @import "toys";
 @import "blog";
 
+$brownC: #725F5B;
+$whiteC: #FFFFFF;
+$blackC: #1E0606;
 
 
-/* banner */
-.banner-wrapper {
-    width: 100%;
+.banner {
+     width: 100%;
     height: 412px;
- }
- .banner {
+    &__subtitle {
+        position: relative;
+        padding: 14px;
+        }  
+    }
+
+ .banner-content {
      display: flex;
      background-color: #EEE4DB;
      margin-top: 130px;
@@ -44,67 +52,66 @@
      &__header {
         display: none; 
      }
+    &__slider {
+        padding: 18px 44px 0 28px;
+    }
+    &__num {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 200;
+            font-size: 60px;
+            line-height: 74px;
+            color: #1E06060D;
+        }
+        &__list {
+            line-height: 12px;
+            padding-left: 2px;
+        }
+        &__slider-switch {
+            background-color: #D6CAC2;
+            width: 32px;
+            height: 3px;
+            border: none;
+        }
+    &__slider-switch:hover {
+        cursor: pointer;
+        background-color: #725F5B;
+    }
+    &__slider-wrap:hover {
+   background-color: #725F5B;
+    }
  }
 
- .slider {
-    padding: 18px 44px 0 28px;
-    &__num {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 200;
-        font-size: 60px;
-        line-height: 74px;
-        color: #1E06060D;
-    }
-    &__list{
-        line-height: 12px;
-        padding-left: 2px;
-    }
-    &__switch {
-        background-color: #D6CAC2;
-        width: 32px;
-        height: 3px;
-        border: none;
-    }
- &__switch:hover {
-    cursor: pointer;
-    background-color: #725F5B;
-}
 .active,
-&__switch:active {
-    background-color: rgba(30, 6, 6, 0.6);
-}
+.banner-content__slider-switch:active {
+     background-color: rgba(30, 6, 6, 0.6);
+ }
 
-& [li]:hover {
-   background-color: #725F5B;
+ .banner-text {
+ &__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    padding: 90px 5px 18px 0;
 }
+&__subtitle {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 21px; 
 }
-
-.banner-text {
-    &__title{
-        font-family: 'Montserrat';
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 110%;
-        padding: 90px 5px 18px 0;
-    }
-    &__subtitle{
-        font-family: 'Crimson Text';
-        font-style: italic;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 26px;
-        padding-bottom: 21px; 
-    }
-     &__img {
-        position:relative;
-        bottom: 90px;
-        right: 100px;
-        width: 636px;
-        height: 489px;
-        z-index: 2;
-    }
+ &__img {
+    position:relative;
+    bottom: 90px;
+    right: 100px;
+    width: 636px;
+    height: 489px;
+    z-index: 2;
 }
+ }
 
 .banner-subtitle {
     position: relative;
@@ -122,7 +129,7 @@
     line-height: 14px;
     text-transform: uppercase;
 }
- 
+
 
  input[name="button"] {
      visibility: hidden;
@@ -130,17 +137,11 @@
     
  
  
- /* category-products */
+//  /* category-products */
  .category-products {
      width: 1180px;
      &__header {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 46px;
-        text-transform: uppercase;
-        color: #1E0606; 
+        color: $blackC; 
         padding: 90px 0 30px;
     }
     &__list {
@@ -151,245 +152,206 @@
     &__item {
         position: relative;
     }
+    &__navigation {
+        margin: 0 0;
+        padding-top: 30px;
+        display: flex;
+    }
+ }
+
+ .navigation {
+    width: 680px;
+    &__button {
+        border: none;
+        background-color: transparent;
+        padding: 0 5px 0 0;
+        margin: 0 0;
+    }
+    &__button:before {
+        content: '';
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        background-position: center;
+        background-color: rgba(112, 187, 220, 0.2);
+        background-image: url(../img/icons/blue-arrow-left.svg);
+    }
+        
+    &__button--prev:hover:before {
+            background-image: url(../img/icons/arrow-hover.svg);
+            transform: scaleX(-1);
+        }
+    &__button--prev:active:before {
+            background-image: url(../img/icons/arrow-active.svg);
+            transform: scaleX(-1);
+        }
+
+    &__button--next:before {
+        background-image: url(../img/icons/blue-arrow-right.svg);
+    }
+    &__button--next:hover:before {
+        background-image: url(../img/icons/arrow-hover.svg);
+    }
+    &__button--next:active:before {
+        background-image: url(../img/icons/arrow-active.svg);
+    }
+        
+    &__text {
+        width: 600px;
+        padding-left: 14px;
+        margin: 0 0;
+    }
  }
 
  
  
- .category-products__navigation {
-     margin: 0 0;
-     padding-top: 30px;
-     display: flex;
-     width: 680px;
- }
-
- .navigation .bar {
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-}
- 
- /* ___________________стрелки */
- 
- .category-products__navigation-buttonLeft,
- .category-products__navigation-buttonRight {
-     border: none;
-     background-color: transparent;
-     padding: 0 5px 0 0;
-     margin: 0 0;
- }
- 
- .category-products__navigation-buttonLeft:before,
- .category-products__navigation-buttonRight:before{
-     content: '';
-     background-repeat: no-repeat;
-     width: 38px;
-     height: 38px;
-     cursor: pointer;
-     display: inline-block;
-     text-align: center;
-     background-position: center;
-     background-color: rgba(112, 187, 220, 0.2);
- }
- 
- .category-products__navigation-buttonLeft:before {
-     background-image: url(../img/icons/blue-arrow-left.svg);
- }
- 
- .category-products__navigation-buttonLeft:hover:before {
-     background-image: url(../img/icons/arrow-hover.svg);
-     transform: scaleX(-1);
- }
- 
- .category-products__navigation-buttonLeft:active:before {
-     background-image: url(../img/icons/arrow-active.svg);
-     transform: scaleX(-1);
- }
- 
- .category-products__navigation-buttonRight:before {
-     background-image: url(../img/icons/blue-arrow-right.svg);
- }
- 
- .category-products__navigation-buttonRight:hover:before {
-     background-image: url(../img/icons/arrow-hover.svg);
- }
- 
- .category-products__navigation-buttonRight:active:before {
-     background-image: url(../img/icons/arrow-active.svg);
- }
- 
- .category-products__navigation-buttonRight:before{
-     background-image: url(../img/icons/blue-arrow-right.svg);
- }
- 
- .category-products__navigation-text {
-     width: 600px;
-     padding-left: 14px;
-     margin: 0 0;
- }
- 
- /* delivery */
+// //  /* delivery */
  .delivery {
      display: flex;
      padding-top: 90px;
      justify-content: flex-start;
+     &__img {
+        margin: 0 0;
+    }
+    &__info {
+        margin-left: 60px;
+        width: 535px;
+    }
+    &__header {
+        padding-top: 30px;
+        padding-bottom: 6px;
+        padding-left: 60px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__text {
+        padding-top: 16px;
+        padding-left: 60px;
+    }
+
+    &__link {
+        position: relative;
+        top: 34px;
+        left: 60px;
+    }
  }
  
- .delivery__img {
-     margin: 0 0;
+ .menu {
+    &__page {
+        max-width: 326px;
+        height: 56px;
+        display: flex;
+    }
+     
+ &__button {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    padding: 9px 180px 8px 60px;
+    color: $blackC;
+    margin: 0 0;
+}
+
+&__page:active {
+    background-color: rgba(112, 187, 220, 0.2);
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+&__page:hover {
+    background-color: rgba(112, 187, 220, 0.2);
+}
+
+ .delivery__menuList-button:hover {
+    font-weight: 700;
+}
  }
 
- .delivery__info {
-     margin-left: 60px;
-     width: 535px;
- }
- 
- .delivery__header {
-     font-family: 'Montserrat';
-     font-weight: 700;
-     font-size: 38px;
-     line-height: 46px;
-     text-transform: uppercase;
-     padding-top: 30px;
-     padding-bottom: 6px;
-     padding-left: 60px;
- }
- .delivery__menu {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
- }
- 
- .delivery-page {
-     max-width: 326px;
-     height: 56px;
-     display: flex;
- }
- 
- .delivery__menuList-button {
-     font-family: 'Crimson Text';
-     font-style: italic;
-     font-weight: 400;
-     font-size: 26px;
-     line-height: 34px;
-     padding: 9px 180px 8px 60px;
-     color: #1E0606;
-     margin: 0 0;
- }
- 
- .active-btn,
- .delivery-page:active {
-     background-color: rgba(112, 187, 220, 0.2);
-     font-weight: 700;
-     opacity: 0.7;
- }
- 
- .delivery-page:hover {
-     background-color: rgba(112, 187, 220, 0.2);
- }
- 
- .delivery__menuList-button:hover {
-     font-weight: 700;
- }
- 
- .delivery__text {
-     padding-top: 16px;
-     padding-left: 60px;
- }
- 
- .delivery__link {
-     position: relative;
-     top: 34px;
-     left: 60px;
- }
  
  
- /* companies */
- .companies__header {
+// //  /* companies */
+ .companies {
+        &__header {
      display: none;
  }
- .companies__list {
+ &__list {
      display: flex;
      justify-content: space-between;
      align-items: center;
      margin-bottom: 115px;
      margin-top: 90px;
  }
+}
  
  
- /* infoDesignLifeKids */
+// //  /* infoDesignLifeKids */
  
  
- .infoDesignLifeKids {
+ .buy-now {
      margin: 0 0;
      margin-right: 57px;
      width: 543px;
      background-color: #E1F0F7;
      height: 100%;
      padding-bottom: 35px;
+     &__subtitle {
+        font-family: 'Crimson Text';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+    &__desc {
+        max-width: 510px;
+        margin: 0 0;
+        padding-left: 30px;
+        margin-bottom: 29px;
+    }
+    &__button {
+        margin-left: 30px;
+    }
  }
  
- .infoDesignLifeKids__header, .infoContacts__header{
-     font-family: 'Montserrat';
-     font-style: normal;
-     font-weight: 700;
-     font-size: 38px;
-     line-height: 46px;
-     text-transform: uppercase;
+ .buy-now__header, .contacts__header{
      padding-left: 30px;
      margin-top: -25px;
  }
  
- .infoDesignLifeKids__subtitle {
-     font-family: 'Crimson Text';
-     font-style: italic;
-     font-weight: 400;
-     font-size: 26px;
-     line-height: 34px;
-     padding-bottom: 10px;
-     padding-left: 30px;
-     padding-top: 10px;
- }
- 
- .desc {
-     max-width: 510px;
-     margin: 0 0;
-     padding-left: 30px;
-     margin-bottom: 29px;
- }
- 
- .buy {
-     margin-left: 30px;
- }
  
  
- /* infoContacts */
- .infoContacts {
+//  /* infoContacts */
+ .contacts {
     margin: 0 0;
     max-width: 483px;
- }
- 
- 
- .infoContacts__header {
-    margin-bottom: -22px; 
- }
- 
- .infoContacts__text {
-     margin: 0 0;
-     width: 543px;
-     padding: 41px 30px 103px 30px;
-     background-color: #E1F0F7;
- }
- 
- .infoContacts__map {
-     padding-left: 30px;
-     margin-top: -72px; 
-     margin-bottom: 33px;
+    &__header {
+        margin-bottom: -22px; 
+     }
+    &__text {
+        margin: 0 0;
+        width: 543px;
+        padding: 41px 30px 103px 30px;
+        background-color: #E1F0F7;
+    }
+    &__map {
+        padding-left: 30px;
+        margin-top: -72px; 
+        margin-bottom: 33px;
+    }
  }
  
 
-
-
-// scroll 
+// // scroll 
 
 .scroll-off {
 	position: fixed;
@@ -413,4 +375,3 @@
 	top: 0;
 	width: 100%;
 }
- 

@@ -1,63 +1,72 @@
+
+$blackC: #1E0606;
 /* header */
 .header {
     width: 100%;
     display: flex;
-    margin-top: 50px;
     align-items: center;
+    &__contact {
+        display: flex;
+        align-items: center;
+    }
 }
+
+.header__logo, .nav, .search-contact {
+    margin-top: 50px;
+}
+
 /* __UI */
-.header__logo:hover,
-.header__list > li:hover,
-.header__contact-search:hover,
-.header__contact-link:hover
+.logo:hover,
+.nav__list-item:active,
+.search-contact__search:hover,
+.search-contact__link:hover
  {
     opacity: 0.5;
 }
 
 .header__logo:active,
-.header__list > li:active,
-.header__contact-search:active,
-.header__contact-link:active{
+.nav__list-item:active,
+.search-contact__search:active,
+.search-contact__link:active{
     opacity: 0.25;
 }
 
 /* nav */
-
-.header__nav {
-    flex-grow: 2;
-}
-.header__list {
-    padding-left: 50px;
-    display: flex;
-}
-
-.header__contact {
-    display: flex;
-    align-items: center;
-}
-
-.header__list-item, .header__contact-link {
+%equal-font-style {
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 20px;
-    color:  #1E0606;
-}
-.header__list-item {
-    margin: 10px;
+    color:  $blackC;
 }
 
 
-.header__contact-search {
-    background: none;
-    border: none;
-    padding: 0;
-    padding-right: 3px;
-    padding-top: 4px;
- 
+.nav {
+    flex-grow: 2;
+    &__list {
+        padding-left: 50px;
+        display: flex;
+    }
+    &__list-link { 
+        @extend %equal-font-style;
+        margin: 10px;
+    }
+    
 }
 
-.header__contact-search:before {
+.search-contact {
+    &__link {
+        @extend %equal-font-style;
+        font-weight: 700;
+    }
+    &__search {
+        background: none;
+        border: none;
+        padding: 0;
+        padding-right: 3px;
+        padding-top: 4px;
+    } 
+&__search:before {
     content: '';
     background-image: url(../img/icons/search.svg);
     background-repeat: no-repeat;
@@ -68,7 +77,5 @@
     cursor: pointer;
     margin-right: 23px;
 }
-
-.header__contact-link {
-    font-weight: 700;
 }
+

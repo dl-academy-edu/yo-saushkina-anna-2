@@ -1,16 +1,21 @@
 
-
 .contact {
     margin-bottom: 31px;
+    &__form-text {
+        margin-left: 120px;
+    }
+      &__text {
+        min-width: 410px;
+        margin-bottom: 20px;
+        margin-left: 0;
+      }
+      &__offer {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 34px;
+        text-transform: uppercase;
+        color: #C29974;
+      }
 }
-
-
-.contact__form-text {
-    margin-left: 120px;
-}
-
-.contact__form-text p
-{
-    min-width: 410px;
-}
-

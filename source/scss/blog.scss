@@ -1,49 +1,39 @@
 /* blog */
-.blog__list {
+.blog {
+  &__list {
     flex-wrap: wrap;
     flex-direction: row;  
+    display: flex;
+    justify-content: space-between;
 }
-
-.blog__list-post {
+&__post {
     width: 380px;
     margin-bottom: 33px;
 }
-
-/* ___________________________post */
-.blog__list-post-img {
+&__img {
   margin-bottom: 20px;
   min-height: 220px; 
 }
-
-.blog__list-post-date {
+&__date {
     padding-bottom: 7px;
 }
-
-.blog__list-post-text {
+&__text {
     padding-top: 15px;
     font-size: 18px;
     line-height: 25px;
     width: 385px;
 }
-
-.blog__list {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.blog__list-post-link {
+&__link {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-
     color: #1E0606;
 }
-
-.blog__list-post-link:hover,
-.blog__list-post-link:active {
+&__link:hover,
+&__link:active {
     text-decoration: underline;
     cursor: pointer;
+}
 }

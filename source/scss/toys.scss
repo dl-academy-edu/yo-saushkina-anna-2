@@ -4,11 +4,12 @@
     max-width: 100% ;
     min-height: 254px;
     background-color: rgba(125, 151, 218, 0.2);
-    padding-top: 41px;
+
 }
 
 .options__form {
    display: flex;
+       padding-top: 41px;
 }
 
 .options__header {
@@ -387,5 +388,4 @@
     line-height: 22px;
     text-align: center;
     color: #1E0606;
-    padding-top: 16px;
-}
+    padding-top: 16px; }
