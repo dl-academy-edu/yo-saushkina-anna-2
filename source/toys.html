@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Toys</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+        <main>
+            @@include('blocks/breadcrumbs.html',{
+                "header" : "Toy for kids",
+                "active-name": "Toys",
+                "active-link": "/toys.html",
+                "active-second-page": "breadcrumbs__item--active-page",
+              })
+            <section class="options">
+                <h2 class="visually-hidden">options</h2>
+                <form class="options__form container" action="#" method="get">
+                    <fieldset class="range">
+                        <label class="options__form-label options__header" for="cost">
+                            Cost
+                        </label>
+                        <input class="input__range" type="range" name="cost" id="cost" step="10" aria-orientation="horizontal" min="0" max="500" value="100" aria-label="price range selection">
+                        <div class="num">
+                            <p class="min">0</p>
+                            <p class="max">500</p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="color">
+                        <legend class="options__header color-head">Color</legend>
+                        <ul class="options__form-list">
+                            <li class="item">
+                                <input class="checkbox__input" type="checkbox" value="black" id="black" name="color" aria-label="check black products" checked>
+                                <label class="checkbox__label" for="black" id="checkbox">
+                                    Black</label>
+                            </li>
+                            <li class="item">
+                                <input class="checkbox__input" type="checkbox" value="blue" id="blue" name="color" aria-label="check blue products">
+                                <label class="checkbox__label" for="blue">
+                                    Blue</label>
+                            </li>
+                            <li class="item">
+                                <input class="checkbox__input" type="checkbox" value="green" id="green" name="color" aria-label="check green products">
+                                <label class="checkbox__label" for="green">
+                                    Green</label>
+                            </li>
+                            <li class="item">
+                                <input class="checkbox__input" type="checkbox" value="white" id="white" name="color" aria-label="check white products">
+                                <label class="checkbox__label" for="white">
+                                    White</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="options__delivery">
+                        <p class="options__header">Delivery</p>
+                        <ul >
+                            <li class="radio">
+                                <input class="options__radio" type="radio" name="level 1" value="1" id="free" aria-label="check free shipping option">
+                                <label class="options__label" for="free">
+                                    Free shipping
+                                </label>
+                            </li>
+                            <li class="radio">
+                                <input class="options__radio" type="radio" name="level 1" value="1" id="fast" aria-label="check fast shipping option" checked>
+                                <label class="options__label" for="fast">
+                                    Fast shipping
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="options__amount">
+                        <p class="options__header">Amount</p>
+                        <ul class="wrap">
+                            <li class="amount-bg">
+                                <input class="amount-input" type="radio" name="level" value="0-5" id="first" aria-label="check 0-5 amount" checked>
+                                <label class="amount-label" for="first">
+                                    0-5
+                                </label>
+                            </li>
+                            <li class="amount-bg">
+                                <input class="amount-input" type="radio" name="level" value="10-20" id="second" aria-label="check 10-20 amount">
+                                <label class="amount-label" for="second">
+                                    10-20
+                                </label>
+                            </li>
+                            <li class="amount-bg">
+                                <input class="amount-input" type="radio" name="level" value="20-50" id="third" aria-label="check 20-50 amount">
+                                <label class="amount-label" for="third">
+                                    20-50
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="options__button" type="submit">Apply</button>
+                </form>
+            </section>
+            <section class="products container">
+                <h2 class="visually-hidden">products</h2>
+                <ul class="products__list">
+                    @@include('blocks/toy-item.html',{
+                        "img" : "sharky-bean-bag-chair-cover.jpg",
+                        "alt": "sharky bean bag chair cover",
+                        "header": "SHARKY BEAN BAG CHAIR COVER",
+                        "cost": "$60.00 USD",
+                      })
+                      @@include('blocks/toy-item.html',{
+                        "img" : "brass-deco-frames.jpg",
+                        "alt": "brass deco frames",
+                        "header": "BRASS DECO FRAMES",
+                        "cost": "$66.00 USD",
+                      })
+                      @@include('blocks/toy-item.html',{
+                        "img" : "cibo-full-apron.jpg",
+                        "alt": "cibo full apron",
+                        "header": "CIBO FULL APRON",
+                        "cost": "$60.00 USD",
+                      })
+                      @@include('blocks/toy-item.html',{
+                        "img" : "gatcha-gatcha-gumball-machine.jpg",
+                        "alt": "gatcha gatcha gumball machine",
+                        "header": "GATCHA GATCHA GUMBALL MACHINE",
+                        "cost": "$56.00 USD",
+                      })
+                      @@include('blocks/toy-item.html',{
+                        "img" : "christmas-advent-scented-candle.jpg",
+                        "alt": "christmas advent scented candle",
+                        "header": "CHRISTMAS ADVENT SCENTED CANDLE",
+                        "cost": "$29.00 USD",
+                      })
+                      @@include('blocks/toy-item.html',{
+                        "img" : "tangle-spinning-tea-light.jpg",
+                        "alt": "tangle spinning tea light",
+                        "header": "TANGLE SPINNING TEA LIGHT",
+                        "cost": "$56.00 USD",
+                      })
+                </ul>
+                @@include('blocks/pagination.html')
+            </section>
+        </main>
+        @@include('blocks/footer.html')
+  </body>

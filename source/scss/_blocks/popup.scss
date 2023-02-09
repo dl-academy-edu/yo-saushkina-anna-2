@@ -1,0 +1,292 @@
+/* ____________________popup */
+.popup {
+    display: none;
+    top: 113px;
+    left: 612px;
+    position: absolute;
+    z-index: 3;
+  }
+  
+  .open {
+    display: flex;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(125, 151, 218, 0.8);
+  }
+  
+  .popup__wr {
+    display: flex;
+    z-index: 3;
+    position: sticky;
+  }
+  
+  .close {
+    background: none;
+    background-image: url('../img/icons/close.svg');
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    border: none;
+    margin-left: 10px;
+  }
+  
+  .close:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .close:active {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  
+  .popup__header {
+    visibility: hidden;
+  }
+  
+  .popup__form-wrap {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; 
+  }
+  
+  .phone-email-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .label-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  
+    color: #1E0606;  
+  }
+  
+
+
+  /* _____________ popup */
+.contact {
+  display: flex;
+}
+
+.contact__header {
+  display: none;
+}
+
+.contact__form {
+  padding: 40px 40px;
+  margin: 0 0;
+  background: #E5EAF8;
+}
+
+.column__two-input {
+  display: flex;
+  width: 600px;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.label__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0;
+}
+
+.contact__label {
+  font-size: 14px;
+  padding-bottom: 3px;
+  margin: 0 0;
+}
+
+.contact__input {
+  width: 290px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.contact__input-name {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 18px;
+}
+
+.contact__input-name::placeholder {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  padding-left: 17px;
+  color: #1E0606;
+}
+
+.contact__input-name::placeholder:hover {
+  opacity: 0.9;;
+}
+
+
+/* _________________text */
+.contactForm__text-waitingToHelp {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #C29974;
+}
+
+.text {
+  max-width: 380px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.contact__area {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 14px;
+  margin-top: 4px;
+}
+
+/* ________________popup disabled */
+
+.checkbox__input[type='checkbox']:checked,
+.checkbox__input[type='checkbox']:not(:checked)
+{
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox__input[type='checkbox']:checked + .checkbox__label:after,
+.checkbox__input[type='checkbox']:not(:checked) + .checkbox__label:after 
+{
+  content: '';
+  width: 19px;
+  height: 19px;
+  outline: #C29974 auto 5px;
+  background-color: #fff;
+}
+
+.checkbox__input[type='checkbox']:not(:checked) + .checkbox__label:after {
+  opacity: 0;
+}
+
+.checkbox__input[type='checkbox']:checked + .checkbox__label:after {
+  opacity: 1;
+}
+
+.link-btn:disabled {
+  background-color: #C1C1C1;
+  color: #E1E1E1;
+}
+
+.checkbox__input[type='checkbox']:checked + .checkbox__input[type='checkbox']:not(:checked) + .checkbox__label
+{ 
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1;
+  cursor:pointer;
+}
+
+
+/* _____________empty checkbox */
+.checkbox__input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox__label {
+  position: relative;
+}
+
+.checkbox__label:before {
+  position: absolute;
+  margin-top: -2px;
+  content: '';
+  width: 19px;
+  height: 19px;
+
+  border: #C29974 2px solid;
+
+  cursor: pointer; 
+  margin-left: -34px;
+
+}
+
+/*_________________full checkbox*/
+.checkbox__label:after{
+  position: absolute;
+  content: '';
+
+  height: 19px;
+  width: 19px;
+
+  background-color:#FFFFFF;
+  border-radius: 3px;
+  background-image: url(../img/icons/checkbox-on.svg); 
+
+  left: -34px;
+  margin-top: -2px;
+}
+
+.checkbox__label:hover {
+  text-decoration: underline;
+}
+
+.checkbox__input[type="checkbox"] + 
+.checkbox__label:after {
+  content: none;
+} 
+
+.checkbox__input[type="checkbox"]:checked + 
+.checkbox__label::after {
+  content: "";
+}
+
+.checkbox__input[type="checkbox"]:focus + 
+.checkbox__label::before {
+  outline: #C29974 auto 5px;
+}
+
+/* __UI */
+.contact__input:hover,
+.contact__input-name:hover,
+.contact__area:hover,
+.contact__input:active,
+.contact__input-name:active,
+.contact__area:active
+{
+  border: 1px solid #C29974;
+}
+
+/* checkbock and radio disabled */
+
+.checkbox__input:disabled + .options__label:before {
+  color: #908484;
+}
+
+.contact__input:disabled,
+.contact__area:disabled {
+  border: 1px solid #EBEBEB;
+  background-color: #fff;
+}
+
+.check {
+  padding: 4px 0 20px 34px;
+  font-size: 14px;
+  line-height: 16px;
+}

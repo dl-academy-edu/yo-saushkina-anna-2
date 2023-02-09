@@ -1,0 +1,25 @@
+.catalog {
+    &__left-line {
+        margin-right: 300px;
+    }
+    &__right-line {
+        margin: 24px 100px 0 200px; 
+    } 
+&__product-desc {
+    max-width: 680px;
+    margin: 53px 0 55px 563px;
+}
+    &__desc-header {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        text-transform: uppercase;
+        color: #1E0606;
+        padding-bottom: 12px;
+    }
+    &__desc-text {
+        padding-top: 15px;
+    }
+}

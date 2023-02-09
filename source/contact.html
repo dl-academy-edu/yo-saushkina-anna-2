@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Contact</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+  
+    <main>
+      @@include('blocks/breadcrumbs.html',{
+        "header" : "Contact us",
+        "active-name": "Contact Us",
+        "active-link": "/contact.html",
+      })
+
+        <section class="contact container">
+            <h1 class="contact__header">Contact Us</h1>
+            @@include('blocks/popup.html')
+            <div class="contact__form-text">
+                <p class="contact__text">Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p class="contact__text">Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.</p>
+                <p class="contact__offer">An expert is waiting to help you!</p>
+            </div>
+        </section>
+    </main>
+      @@include('blocks/footer.html')
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

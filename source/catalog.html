@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Catalog</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    @@include('blocks/header.html')
+    <main>
+      @@include('blocks/breadcrumbs.html',{
+        "header" : "category products",
+        "active-name": "Catalog",
+        "active-link": "/catalog.html",
+        "active-second-page": "breadcrumbs__item--active-page",
+        "second-link": "",
+      })
+        <section class="category-products catalog container">
+            <h2 class="visually-hidden">products</h2>
+            <ul class="category-products__list catalog__left-line">
+                @@include('blocks/product.html',{
+                    "img": "img/apparel-kids.jpg",
+                    "text": "apparel kids",
+                    "alt": "APPAREL KIDS",
+                    "modify": "apparel",
+                  })
+                  @@include('blocks/product.html',{
+                    "img": "img/holiday-shop.jpg",
+                    "text": "HOLIDAY SHOP",
+                    "alt": "holiday shop",
+                    "modify": "holiday",
+                  })
+                  @@include('blocks/product.html',{
+                    "img": "img/toys.png",
+                    "text": "TOYS",
+                    "alt": "toys",
+                    "modify": "toys",
+                    "link": "../toys.html",
+                  })
+            </ul>
+            <ul class="category-products__list catalog__right-line">
+                @@include('blocks/product.html',{
+                    "img": "img/accessories.jpg",
+                    "text": "ACCESSORIES",
+                    "alt": "accessories",
+                    "modify": "accessories",
+                  })
+                  @@include('blocks/product.html',{
+                    "img": "img/sale.jpg",
+                    "text": "sale",
+                    "alt": "sale",
+                    "modify": "sale",
+                  })
+                  @@include('blocks/product.html',{
+                    "img": "img/apparel-adults.jpg",
+                    "text": "ACCESSORIES",
+                    "alt": "apparel adults",
+                    "modify": "adults",
+                  })
+            </ul>
+        </section>
+        <section class="catalog__product-desc container">
+            <h2 class="catalog__desc-header">Product Description</h2>
+            <p class="catalog__desc-text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even bathe her, just like a little sister.</p>
+            <p class="catalog__desc-text">A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+            <p class="catalog__desc-text">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.</p>
+        </section>
+    </main>   
+    @@include('blocks/footer.html')
+
+    <script src="js/app.js" defer></script>
+</body>

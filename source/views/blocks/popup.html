@@ -1,0 +1,31 @@
+
+        <form class="contact__form" method="post" action="#">
+            <div class="label__wrapper">
+                <label class="contact__label" for="name">Name</label>
+                <input class="contact__input-name" type="text" placeholder="Ivan Ivanov" name="name" id="name" aria-label="enter name">
+            </div>
+            <div class="column__two-input">
+                <div class="label__wrapper">
+                    <label class="contact__label" for="phone">Phone</label>
+                    <input class="contact__input" type="tel" name="phone" id="phone" aria-label="enter phone">
+                </div>
+                <div class="label__wrapper">
+                    <label class="contact__label" for="email">Email</label>
+                    <input class="contact__input" type="email" name="email" id="email" aria-label="enter email">
+                </div>
+            </div>
+            <label class="contact__label" for="textarea">Message</label>
+            <textarea class="contact__area" name="message" id="textarea" cols="30" rows="10" aria-label="enter message"></textarea>
+            <ul>
+                <li class="check">            
+                    <input
+                    class="checkbox__input" type="checkbox" name="processing of personal data" id="checkbox" value="agree" onchange="document.getElementById('submit').disabled = !this.checked;" aria-label="agree with processing personal data">
+                    <label class="checkbox__label check-text" for="checkbox">
+                        By clicking on the button, you consent to the processing of your personal data
+                    </label>
+                </li>
+                <li>
+                    <button class="link-btn" type="submit" aria-label="submit data" id="submit" disabled>submit</button>
+                </li>
+            </ul>
+        </form>

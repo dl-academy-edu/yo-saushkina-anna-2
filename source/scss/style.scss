@@ -15,46 +15,363 @@
 /*
   Import all other blocks
 */
+
 @import "_blocks/container";
+@import "_blocks/header";
 @import "_blocks/footer";
+@import "_blocks/popup";
+@import "_blocks/link-btn";
+@import "_blocks/pagination";
+@import "_blocks/breadcrumbs";
+@import "_blocks/prod";
 
-/*
-  Ниже пример подключения других блоков
+@import "contact";
+@import "catalog";
+@import "toys";
+@import "blog";
 
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
-  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
+$brownC: #725F5B;
+$whiteC: #FFFFFF;
+$blackC: #1E0606;
 
-  Для именования селекторов давайте придерживаться стиля two dashes
-  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
 
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
-  то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
+.banner {
+     width: 100%;
+    height: 412px;
+    &__subtitle {
+        position: relative;
+        padding: 14px;
+        }  
+    }
 
-.coming-soon {
-  color: $color-text;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  margin: auto;
-  padding: 0 5vw;
+ .banner-content {
+     display: flex;
+     background-color: #EEE4DB;
+     margin-top: 130px;
+     height: 412px;
+     &__header {
+        display: none; 
+     }
+    &__slider {
+        padding: 18px 44px 0 28px;
+    }
+    &__num {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 200;
+            font-size: 60px;
+            line-height: 74px;
+            color: #1E06060D;
+        }
+        &__list {
+            line-height: 12px;
+            padding-left: 2px;
+        }
+        &__slider-switch {
+            background-color: #D6CAC2;
+            width: 32px;
+            height: 3px;
+            border: none;
+        }
+    &__slider-switch:hover {
+        cursor: pointer;
+        background-color: #725F5B;
+    }
+    &__slider-wrap:hover {
+   background-color: #725F5B;
+    }
+ }
 
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
+.active,
+.banner-content__slider-switch:active {
+     background-color: rgba(30, 6, 6, 0.6);
+ }
+
+ .banner-text {
+ &__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    padding: 90px 5px 18px 0;
+}
+&__subtitle {
+    font-family: 'Crimson Text';
+    font-style: italic;
     font-weight: 400;
-    margin: 0 auto;
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 21px; 
+}
+ &__img {
+    position:relative;
+    bottom: 90px;
+    right: 100px;
+    width: 636px;
+    height: 489px;
+    z-index: 2;
+}
+ }
+
+.banner-subtitle {
+    position: relative;
+    text-align: center;
+    bottom: 42px;
+    font-weight: 700;
+    color: #FFFFFF;
+
+    background-color: #C29974;
+    padding: 14px;
+    z-index: 2;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14px;
     text-transform: uppercase;
-    width: 100%;
-  }
+}
+
+
+ input[name="button"] {
+     visibility: hidden;
+ }
+    
+ 
+ 
+//  /* category-products */
+ .category-products {
+     width: 1180px;
+     &__header {
+        color: $blackC; 
+        padding: 90px 0 30px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        position: relative;
+    }
+    &__navigation {
+        margin: 0 0;
+        padding-top: 30px;
+        display: flex;
+    }
+ }
+
+ .navigation {
+    width: 680px;
+    &__button {
+        border: none;
+        background-color: transparent;
+        padding: 0 5px 0 0;
+        margin: 0 0;
+    }
+    &__button:before {
+        content: '';
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        background-position: center;
+        background-color: rgba(112, 187, 220, 0.2);
+        background-image: url(../img/icons/blue-arrow-left.svg);
+    }
+        
+    &__button--prev:hover:before {
+            background-image: url(../img/icons/arrow-hover.svg);
+            transform: scaleX(-1);
+        }
+    &__button--prev:active:before {
+            background-image: url(../img/icons/arrow-active.svg);
+            transform: scaleX(-1);
+        }
+
+    &__button--next:before {
+        background-image: url(../img/icons/blue-arrow-right.svg);
+    }
+    &__button--next:hover:before {
+        background-image: url(../img/icons/arrow-hover.svg);
+    }
+    &__button--next:active:before {
+        background-image: url(../img/icons/arrow-active.svg);
+    }
+        
+    &__text {
+        width: 600px;
+        padding-left: 14px;
+        margin: 0 0;
+    }
+ }
+
+ 
+ 
+// //  /* delivery */
+ .delivery {
+     display: flex;
+     padding-top: 90px;
+     justify-content: flex-start;
+     &__img {
+        margin: 0 0;
+    }
+    &__info {
+        margin-left: 60px;
+        width: 535px;
+    }
+    &__header {
+        padding-top: 30px;
+        padding-bottom: 6px;
+        padding-left: 60px;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__text {
+        padding-top: 16px;
+        padding-left: 60px;
+    }
+
+    &__link {
+        position: relative;
+        top: 34px;
+        left: 60px;
+    }
+ }
+ 
+ .menu {
+    &__page {
+        max-width: 326px;
+        height: 56px;
+        display: flex;
+    }
+     
+ &__button {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 34px;
+    padding: 9px 180px 8px 60px;
+    color: $blackC;
+    margin: 0 0;
+}
+
+&__page:active {
+    background-color: rgba(112, 187, 220, 0.2);
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+&__page:hover {
+    background-color: rgba(112, 187, 220, 0.2);
+}
+
+ .delivery__menuList-button:hover {
+    font-weight: 700;
+}
+ }
+
+ 
+ 
+// //  /* companies */
+ .companies {
+        &__header {
+     display: none;
+ }
+ &__list {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 115px;
+     margin-top: 90px;
+ }
+}
+ 
+ 
+// //  /* infoDesignLifeKids */
+ 
+ 
+ .buy-now {
+     margin: 0 0;
+     margin-right: 57px;
+     width: 543px;
+     background-color: #E1F0F7;
+     height: 100%;
+     padding-bottom: 35px;
+     &__subtitle {
+        font-family: 'Crimson Text';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+    &__desc {
+        max-width: 510px;
+        margin: 0 0;
+        padding-left: 30px;
+        margin-bottom: 29px;
+    }
+    &__button {
+        margin-left: 30px;
+    }
+ }
+ 
+ .buy-now__header, .contacts__header{
+     padding-left: 30px;
+     margin-top: -25px;
+ }
+ 
+ 
+ 
+//  /* infoContacts */
+ .contacts {
+    margin: 0 0;
+    max-width: 483px;
+    &__header {
+        margin-bottom: -22px; 
+     }
+    &__text {
+        margin: 0 0;
+        width: 543px;
+        padding: 41px 30px 103px 30px;
+        background-color: #E1F0F7;
+    }
+    &__map {
+        padding-left: 30px;
+        margin-top: -72px; 
+        margin-bottom: 33px;
+    }
+ }
+ 
+
+// // scroll 
+
+.scroll-off {
+	position: fixed;
+	left: 30px;
+	top: 30px;
+}
+
+.scroll-on {
+	position: fixed;
+	left: 30px;
+	top: 60px;
+	pointer-events: none;
+}
+
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
 }

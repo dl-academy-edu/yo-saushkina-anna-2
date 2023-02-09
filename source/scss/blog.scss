@@ -1,0 +1,39 @@
+/* blog */
+.blog {
+  &__list {
+    flex-wrap: wrap;
+    flex-direction: row;  
+    display: flex;
+    justify-content: space-between;
+}
+&__post {
+    width: 380px;
+    margin-bottom: 33px;
+}
+&__img {
+  margin-bottom: 20px;
+  min-height: 220px; 
+}
+&__date {
+    padding-bottom: 7px;
+}
+&__text {
+    padding-top: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    width: 385px;
+}
+&__link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1E0606;
+}
+&__link:hover,
+&__link:active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+}
