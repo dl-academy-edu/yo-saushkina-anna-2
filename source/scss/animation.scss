@@ -1,0 +1,39 @@
+.scene {
+    max-width: 1400px;
+    height: 768px;
+    background-color: #fff;
+    position: relative;
+    margin: auto;
+    &__background {
+        width: 100%;
+    }
+    &__first-car {
+        background: url(../img/animation/car-one.png) no-repeat;
+        width: 251px;
+        height: 100px;
+        position: absolute;
+        bottom: 36%;
+        left: -4%;
+        z-index: 4;
+        animation: cars-move linear 5s forwards;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes cars-move {
+    0% {
+        transform: translateX(0%);    
+      }
+    100% {
+      transform: translateX(500%);    
+    }
+  }
+
+@keyframes first-car {
+    0% {
+        transform: translateX(0%);
+            }
+            100% {
+        transform: translateX(100%);
+            }
+        }

@@ -29,6 +29,8 @@
 @import "catalog";
 @import "toys";
 @import "blog";
+@import "fonts";
+@import "animation";
 
 $brownC: #725F5B;
 $whiteC: #FFFFFF;
@@ -96,7 +98,7 @@ $blackC: #1E0606;
     padding: 90px 5px 18px 0;
 }
 &__subtitle {
-    font-family: 'Crimson Text';
+    font-family: 'CrimsonText';
     font-style: italic;
     font-weight: 400;
     font-size: 20px;
@@ -123,20 +125,15 @@ $blackC: #1E0606;
     background-color: #C29974;
     padding: 14px;
     z-index: 2;
-    font-family: 'Open Sans';
+    font-family: 'OpenSans';
     font-style: normal;
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
 }
-
-
  input[name="button"] {
      visibility: hidden;
- }
-    
- 
- 
+ }   
 //  /* category-products */
  .category-products {
      width: 1180px;
@@ -178,8 +175,7 @@ $blackC: #1E0606;
         background-position: center;
         background-color: rgba(112, 187, 220, 0.2);
         background-image: url(../img/icons/blue-arrow-left.svg);
-    }
-        
+    }  
     &__button--prev:hover:before {
             background-image: url(../img/icons/arrow-hover.svg);
             transform: scaleX(-1);
@@ -188,7 +184,6 @@ $blackC: #1E0606;
             background-image: url(../img/icons/arrow-active.svg);
             transform: scaleX(-1);
         }
-
     &__button--next:before {
         background-image: url(../img/icons/blue-arrow-right.svg);
     }
@@ -197,17 +192,13 @@ $blackC: #1E0606;
     }
     &__button--next:active:before {
         background-image: url(../img/icons/arrow-active.svg);
-    }
-        
+    }   
     &__text {
         width: 600px;
         padding-left: 14px;
         margin: 0 0;
     }
  }
-
- 
- 
 // //  /* delivery */
  .delivery {
      display: flex;
@@ -234,23 +225,20 @@ $blackC: #1E0606;
         padding-top: 16px;
         padding-left: 60px;
     }
-
     &__link {
         position: relative;
         top: 34px;
         left: 60px;
     }
  }
- 
  .menu {
     &__page {
         max-width: 326px;
         height: 56px;
         display: flex;
     }
-     
  &__button {
-    font-family: 'Crimson Text';
+    font-family: 'CrimsonText';
     font-style: italic;
     font-weight: 400;
     font-size: 26px;
@@ -259,13 +247,16 @@ $blackC: #1E0606;
     color: $blackC;
     margin: 0 0;
 }
-
+&__button:hover {
+    font-family: 'CrimsonText';
+    font-style: italic;
+    font-weight: bold;
+}
 &__page:active {
     background-color: rgba(112, 187, 220, 0.2);
     font-weight: 700;
     opacity: 0.7;
 }
-
 &__page:hover {
     background-color: rgba(112, 187, 220, 0.2);
 }
@@ -274,9 +265,6 @@ $blackC: #1E0606;
     font-weight: 700;
 }
  }
-
- 
- 
 // //  /* companies */
  .companies {
         &__header {
@@ -290,11 +278,7 @@ $blackC: #1E0606;
      margin-top: 90px;
  }
 }
- 
- 
 // //  /* infoDesignLifeKids */
- 
- 
  .buy-now {
      margin: 0 0;
      margin-right: 57px;
@@ -303,7 +287,7 @@ $blackC: #1E0606;
      height: 100%;
      padding-bottom: 35px;
      &__subtitle {
-        font-family: 'Crimson Text';
+        font-family: 'CrimsonText';
         font-style: italic;
         font-weight: 400;
         font-size: 26px;
@@ -322,14 +306,10 @@ $blackC: #1E0606;
         margin-left: 30px;
     }
  }
- 
  .buy-now__header, .contacts__header{
      padding-left: 30px;
      margin-top: -25px;
  }
- 
- 
- 
 //  /* infoContacts */
  .contacts {
     margin: 0 0;
@@ -349,23 +329,18 @@ $blackC: #1E0606;
         margin-bottom: 33px;
     }
  }
- 
-
 // // scroll 
-
 .scroll-off {
 	position: fixed;
 	left: 30px;
 	top: 30px;
 }
-
 .scroll-on {
 	position: fixed;
 	left: 30px;
 	top: 60px;
 	pointer-events: none;
 }
-
 .disable-scroll {
 	position: relative;
 	overflow: hidden;

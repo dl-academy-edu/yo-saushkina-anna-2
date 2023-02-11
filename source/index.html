@@ -133,7 +133,7 @@
                 })
               </ul>
           </section>
-      <div class="container style">
+      <div class="container flex-wrapper">
           <section class="buy-now">
               <h2 class="buy-now__header header-style">Design Life Kids</h2>
               <p class="buy-now__subtitle">About Us</p>
@@ -151,15 +151,13 @@
       </div>
   </main>
       @@include('blocks/footer.html')
-
       <div class="popup">
-        <div class="popup__wr">
+        <div class="popup__wrapper">
             @@include('blocks/popup.html')
-            <button class="close" type="button"></button>
+            <button class="popup__close" type="button"></button>
         </div>
-        <div class="overlay"></div>
+        <div class="popup__overlay"></div>
     </div>
-
     <script src="js/app.js" defer></script>
     <script src="js/popup.js" defer></script>
   </body>

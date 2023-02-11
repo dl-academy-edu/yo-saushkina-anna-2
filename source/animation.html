@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Animation</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main>
+        @@include('blocks/breadcrumbs.html',{
+            "header": "animation scene",
+            "active-name": "Animation",
+            "active-link": "/animation.html",
+            "active-second-page": "breadcrumbs__item--active-page",
+          })
+    <section class="scene">
+        <img class="scene__background" src="./img/animation/background.png" alt="animation scene" width="1400" height="768">
+        <div class="scene__first-car"></div>
+    </section>
+    </main>
+    @@include('blocks/footer.html')
+   
+  <script src="js/app.js" defer></script>
+</body>
