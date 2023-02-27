@@ -1,0 +1,12 @@
+.companies {
+    &__list-img {
+        transition: 0.4s;
+    }
+    &__list-img:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    &__list-img:active {
+        opacity: 0.5;
+    }
+}

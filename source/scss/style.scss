@@ -24,6 +24,7 @@
 @import "_blocks/pagination";
 @import "_blocks/breadcrumbs";
 @import "_blocks/prod";
+@import "_blocks/companies";
 
 @import "contact";
 @import "catalog";
@@ -35,7 +36,7 @@
 $brownC: #725F5B;
 $whiteC: #FFFFFF;
 $blackC: #1E0606;
-
+$transition: 0.4s;
 
 .banner {
      width: 100%;
@@ -45,7 +46,6 @@ $blackC: #1E0606;
         padding: 14px;
         }  
     }
-
  .banner-content {
      display: flex;
      background-color: #EEE4DB;
@@ -65,7 +65,7 @@ $blackC: #1E0606;
             line-height: 74px;
             color: #1E06060D;
         }
-        &__list {
+        &__slider-list {
             line-height: 12px;
             padding-left: 2px;
         }
@@ -74,16 +74,19 @@ $blackC: #1E0606;
             width: 32px;
             height: 3px;
             border: none;
-        }
-    &__slider-switch:hover {
-        cursor: pointer;
-        background-color: #725F5B;
-    }
-    &__slider-wrap:hover {
-   background-color: #725F5B;
+            }
+            &__slider-switch:hover {
+                cursor: pointer;
+                background-color: $brownC;
+                }
+    &__slider-wrap {
+        width: 32px;
+        height: 3px;
+        &:hover {
+            background-color: $brownC;
+             }  
     }
  }
-
 .active,
 .banner-content__slider-switch:active {
      background-color: rgba(30, 6, 6, 0.6);
@@ -95,7 +98,8 @@ $blackC: #1E0606;
     font-weight: 700;
     font-size: 40px;
     line-height: 110%;
-    padding: 90px 5px 18px 0;
+    padding: 65px 5px 16px 0;
+    margin-bottom: 0;
 }
 &__subtitle {
     font-family: 'CrimsonText';
@@ -114,14 +118,12 @@ $blackC: #1E0606;
     z-index: 2;
 }
  }
-
 .banner-subtitle {
     position: relative;
     text-align: center;
     bottom: 42px;
     font-weight: 700;
     color: #FFFFFF;
-
     background-color: #C29974;
     padding: 14px;
     z-index: 2;
@@ -145,7 +147,6 @@ $blackC: #1E0606;
         display: flex;
         justify-content: space-between;
     }
-    
     &__item {
         position: relative;
     }
@@ -155,7 +156,6 @@ $blackC: #1E0606;
         display: flex;
     }
  }
-
  .navigation {
     width: 680px;
     &__button {
@@ -173,9 +173,12 @@ $blackC: #1E0606;
         display: inline-block;
         text-align: center;
         background-position: center;
-        background-color: rgba(112, 187, 220, 0.2);
+        background-color: rgba(112, 187, 220, 0.2);   
+    } 
+    &__button--prev:before {
         background-image: url(../img/icons/blue-arrow-left.svg);
-    }  
+        transition: top 0.4s ease 1s;
+    } 
     &__button--prev:hover:before {
             background-image: url(../img/icons/arrow-hover.svg);
             transform: scaleX(-1);
@@ -186,6 +189,7 @@ $blackC: #1E0606;
         }
     &__button--next:before {
         background-image: url(../img/icons/blue-arrow-right.svg);
+        transition: 0.4s;
     }
     &__button--next:hover:before {
         background-image: url(../img/icons/arrow-hover.svg);
@@ -236,6 +240,7 @@ $blackC: #1E0606;
         max-width: 326px;
         height: 56px;
         display: flex;
+        transition: 0.4s;
     }
  &__button {
     font-family: 'CrimsonText';
