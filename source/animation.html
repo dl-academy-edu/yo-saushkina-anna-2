@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Animation</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('blocks/header.html')
+    <main class="animation">
+        @@include('blocks/breadcrumbs.html',{
+            "header": "animation scene",
+            "active-name": "Animation",
+            "active-link": "/animation.html",
+            "active-second-page": "breadcrumbs__item--active-page",
+          })
+          <section class="animation__scene">
+            <div class="animation__sky">
+                <div class="animation__clouds"></div>
+                <div class="animation__sun"></div>
+            </div>
+            <div class="animation__city">
+                <div class="animation__road">
+                    <div class="animation__car-one"></div>
+                    <div class="animation__car-two"></div>
+                    <div class="animation__car-three"></div>
+                    <div class="animation__car-four"></div>
+                </div>
+                <div class="animation__bg-lantern"></div>
+                <div class="animation__lantern"></div>
+                <div class="animation__car"></div>
+                <div class="animation__car-message"></div>
+                <div class="animation__people">
+                    <div class="animation__woman-message"></div>
+                    <div class="animation__woman">
+                        <div class="animation__woman-hand"></div>
+                    </div>
+                    <div class="animation__man">
+                        <div class="animation__man-hand"></div> 
+                    </div>
+                    <div class="animation__man-message"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('blocks/footer.html')
+  <script src="js/app.js" defer></script>
+</body>

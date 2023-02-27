@@ -32,14 +32,12 @@
   &__connect-form {
     display: flex;
   }
-  
   &__connectColumn-form-button {
     padding-left: 10px;
   }
-  
   &__email {
     color: #EBEBEB;
-    font-family: 'Open Sans';
+    font-family: 'OpenSans';
     font-size: 16px;
     display: flex;
     width: 300px;
@@ -55,7 +53,6 @@
     #FFFDFD solid 1px;
     cursor: pointer;
   }
-  
   &__socials {
     display: flex;
     margin-top: 24px;
@@ -86,15 +83,11 @@
     align-items: center;
   }
 }
-
-
 svg path {
   fill:inherit;
   stroke:inherit;
   stroke-width:inherit;
 }
-
-
 
 /* _______________stars style */
 .rating {
@@ -150,7 +143,6 @@ svg path {
     margin: 0 0;
     margin-left: 45px;
     margin-bottom: 4px;
-  
   }
   &__meta {
     display: flex;
@@ -166,13 +158,10 @@ svg path {
     text-decoration: underline;
   }
 }
-
-
 .rating__input,
 .rating__label {
   float: right;
 }
-
 
 .rating__input:focus + .rating__label:after,
 .rating__input:hover + .rating__label:after {

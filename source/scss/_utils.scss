@@ -21,3 +21,13 @@
 .u-invisible {
   visibility: hidden;
 }
+
+.banner__hidden-header {
+  opacity: 0;
+  position: absolute;
+}
+
+.visually-hidden {
+  opacity: 0;
+  position: absolute;
+}

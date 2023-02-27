@@ -1,29 +1,29 @@
 const popup = document.querySelector('.popup');
 const btn = document.querySelector('.btn__js');
-const closePopup = document.querySelector('.close');
-const input = document.querySelector('.contact__input');
-const overlay = document.querySelector('.overlay');
+const closePopup = document.querySelector('.popup__close');
+const input = document.querySelector('.modal-window__input');
+const overlay = document.querySelector('.popup__overlay');
 
 const btnOff = document.querySelector('.btn__js');
 const btnOn = document.querySelector('.popup');
 
 
 btn.addEventListener('click', function() {
-    popup.classList.add('open');
+    popup.classList.add('popup__open');
     input.focus();
 });
 
 closePopup.addEventListener('click', () => {
-    popup.classList.remove('open'); 
+    popup.classList.remove('popup__open'); 
 });
 
 overlay.addEventListener('click', () => {
-    popup.classList.remove('open');
+    popup.classList.remove('popup__open');
 });
 
 window.addEventListener("keydown", function(e) {
-    if (e.code === "Escape" && popup.classList.contains('open')) {
-        popup.classList.remove('open');
+    if (e.code === "Escape" && popup.classList.contains('popup__open')) {
+        popup.classList.remove('popup__open');
         btn.focus();
     }
 });

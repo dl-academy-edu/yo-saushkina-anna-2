@@ -1,6 +1,10 @@
 
 .contact {
     margin-bottom: 31px;
+    display: flex; 
+&__header {
+  display: none;
+}
     &__form-text {
         margin-left: 120px;
     }
@@ -17,5 +21,9 @@
         line-height: 34px;
         text-transform: uppercase;
         color: #C29974;
+      }
+      &__form {
+        padding: 40px 40px;
+        margin: 0 0;
       }
 }

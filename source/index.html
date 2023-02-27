@@ -30,7 +30,7 @@
               <p class="banner-content__header">Slider</p>
               <div class="banner-content__slider">
                   <span class="banner-content__num">01</span>
-                  <ul class="slider__list banner-content__slider-list"> 
+                  <ul class="banner-content__slider-list slider__list"> 
                       <li lass="banner-content__slider-wrap"><button class="banner-content__slider-switch active" type="button" aria-label="switch first slide"></button></li>
                       <li lass="banner-content__slider-wrap"><button class="banner-content__slider-switch" type="button" aria-label="switch second slide"></button></li>
                       <li lass="banner-content__slider-wrap"><button class="banner-content__slider-switch" type="button" aria-label="switch third slide"></button></li>
@@ -133,7 +133,7 @@
                 })
               </ul>
           </section>
-      <div class="container style">
+      <div class="container flex-wrapper">
           <section class="buy-now">
               <h2 class="buy-now__header header-style">Design Life Kids</h2>
               <p class="buy-now__subtitle">About Us</p>
@@ -151,15 +151,13 @@
       </div>
   </main>
       @@include('blocks/footer.html')
-
       <div class="popup">
-        <div class="popup__wr">
+        <div class="popup__wrapper">
             @@include('blocks/popup.html')
-            <button class="close" type="button"></button>
+            <button class="popup__close" type="button"></button>
         </div>
-        <div class="overlay"></div>
+        <div class="popup__overlay"></div>
     </div>
-
     <script src="js/app.js" defer></script>
     <script src="js/popup.js" defer></script>
   </body>

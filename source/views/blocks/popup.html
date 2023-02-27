@@ -1,26 +1,25 @@
-
-        <form class="contact__form" method="post" action="#">
-            <div class="label__wrapper">
-                <label class="contact__label" for="name">Name</label>
-                <input class="contact__input-name" type="text" placeholder="Ivan Ivanov" name="name" id="name" aria-label="enter name">
+<form class="contact__form modal-window" method="post" action="#">
+            <div class="modal-window__label-wrapper">
+                <label class="modal-window__label" for="name">Name</label>
+                <input class="modal-window__input-name" type="text" placeholder="Ivan Ivanov" name="name" id="name" aria-label="enter name">
             </div>
-            <div class="column__two-input">
-                <div class="label__wrapper">
-                    <label class="contact__label" for="phone">Phone</label>
-                    <input class="contact__input" type="tel" name="phone" id="phone" aria-label="enter phone">
+            <div class="modal-window__phone-email">
+                <div class="modal-window__label-wrapper">
+                    <label class="modal-window__label" for="phone">Phone</label>
+                    <input class="modal-window__input" type="tel" name="phone" id="phone" aria-label="enter phone">
                 </div>
-                <div class="label__wrapper">
-                    <label class="contact__label" for="email">Email</label>
-                    <input class="contact__input" type="email" name="email" id="email" aria-label="enter email">
+                <div class="modal-window__label-wrapper">
+                    <label class="modal-window__label" for="email">Email</label>
+                    <input class="modal-window__input" type="email" name="email" id="email" aria-label="enter email">
                 </div>
             </div>
-            <label class="contact__label" for="textarea">Message</label>
-            <textarea class="contact__area" name="message" id="textarea" cols="30" rows="10" aria-label="enter message"></textarea>
-            <ul>
-                <li class="check">            
+            <label class="modal-window__label" for="textarea">Message</label>
+            <textarea class="modal-window__area" name="message" id="textarea" cols="30" rows="10" aria-label="enter message"></textarea>
+            <ul class="modal-window__checkbox agreement">
+                <li class="agreement__checking">       
                     <input
-                    class="checkbox__input" type="checkbox" name="processing of personal data" id="checkbox" value="agree" onchange="document.getElementById('submit').disabled = !this.checked;" aria-label="agree with processing personal data">
-                    <label class="checkbox__label check-text" for="checkbox">
+                    class="agreement__checkbox-input" type="checkbox" name="processing of personal data" id="checkbox" value="agree" onchange="document.getElementById('submit').disabled = !this.checked;" aria-label="agree with processing personal data">
+                    <label class="agreement__checkbox-label check-text" for="checkbox">
                         By clicking on the button, you consent to the processing of your personal data
                     </label>
                 </li>
