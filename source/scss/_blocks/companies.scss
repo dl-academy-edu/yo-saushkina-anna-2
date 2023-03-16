@@ -1,4 +1,11 @@
 .companies {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+        justify-content: space-between;
+    margin: 0 0;
+    }
     &__list-img {
         transition: 0.4s;
     }
@@ -8,5 +15,9 @@
     }
     &__list-img:active {
         opacity: 0.5;
+    }
+    &__list-item {
+        min-width: 230px;
+        padding-bottom: 40px;
     }
 }
