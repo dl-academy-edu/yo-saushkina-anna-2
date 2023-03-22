@@ -1,0 +1,328 @@
+.animation {
+    &__scene {
+        max-height: 100%;
+        overflow: hidden;
+    }
+    &__sky {
+            position: relative;
+            max-width: 1400px;
+            height: 200px;
+            overflow: hidden;
+        }
+    &__clouds {
+        position: absolute;
+        background: url(../img/animation/clouds.png) no-repeat;
+        width: 100%;
+        height: 120px;
+        top: 20%;
+        z-index: 5;
+        animation: clouds linear 25s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__sun {
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #F4EBFF;
+        z-index: 2;
+    }
+    &__city {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1400px;
+        height: 630px;
+        background: url(../img/animation/background.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        z-index: 1;
+    }
+    &__road {
+        padding-top: 615px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+    &__car-one {
+        background: url(../img/animation/car-one.png) no-repeat;
+        width: 251px;
+        height: 100px;
+        position: absolute;
+        bottom: 36%;
+        left: -4%;
+        z-index: 5;
+        animation: cars-move linear 37s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__car-two {
+        background: url(../img/animation/сar-two.png) no-repeat;
+        background-size: cover;
+        width: 204px;
+        height: 96px;
+        position: absolute;
+        bottom: 37%;
+        left: 23.5%;
+        z-index: 4;
+        animation: cars-move linear 20s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__car-three {
+        background: url(../img/animation/сar-three.png) no-repeat;
+        background-size: cover;
+        width: 247px;
+        height: 65px;
+        position: absolute;
+        bottom: 40%;
+        left: 44.5%;
+        z-index: 3;
+        animation: cars-move linear 15s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__car-four {
+        background: url(../img/animation/сar-four.png) no-repeat;
+        width: 269px;
+        height: 129px;
+        position: absolute;
+        bottom: 34%;
+        right: -3%;
+        z-index: 6;
+        animation: cars-move linear 15s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__bg-lantern {
+        position: absolute;
+        top: 5%;
+        background: url(../img/animation/bg-lantern.png) no-repeat;
+        background-size: cover;
+        width: 151px;
+        height: 395px;
+        z-index: 8;
+        left: 31%;
+    }
+    &__lantern {
+        position: absolute;
+        top: 5%;
+        background: url(../img/animation/lantern.png) no-repeat;
+        background-size: cover;
+        width: 214px;
+        height: 563px;
+        z-index: 10;
+        left: 75%;
+    }
+    &__car {
+        position: absolute;
+        background: url(../img/animation/сar.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 887px;
+        height: 266px;
+        right: -3%;
+        top: 42.5%;
+        z-index: 9;
+        transform: translateX(200%);
+        animation: taxi 15s linear 5s;
+        animation-iteration-count: infinite;
+    }
+    &__car-message {
+        position: absolute;
+        background: url(../img/animation/car-message.png) no-repeat;
+        width: 164px;
+        height: 99px;
+        right: 26.5%;
+        top: 34%;
+        z-index: 11;
+        opacity: 0;
+        animation: taxi-message 10s ease 5s;
+        animation-iteration-count: infinite;
+    }
+    &__woman-message {
+        position: absolute;
+        background: url(../img/animation/woman-message.png) no-repeat;
+        width: 161px;
+        height: 99px;
+        left: 6.5%;
+        top: 34%;
+        z-index: 10;
+        opacity: 0;
+        animation: woman-message 10s ease 5s;
+        animation-iteration-count: infinite;
+    }
+    &__woman {
+        position: absolute;
+        background: url(../img/animation/woman.png) no-repeat;
+        width: 190px;
+        height: 268px;
+        left: 13%;
+        top: 51%;
+        z-index: 10;
+    }
+    &__woman-hand {
+        position: absolute;
+        background: url(../img/animation/woman-hand.png) no-repeat;
+        width: 98px;
+        height: 100px;
+        left: 20%;
+        top: 41.5%;
+        transform: rotate(0);
+        transform-origin: 8px top;
+        z-index: 10;
+        animation: woman-hand 10s ease 5s;
+        animation-iteration-count: infinite;
+    }
+    &__man {
+        position: absolute;
+        background: url(../img/animation/man.png) no-repeat;
+        width: 205px;
+        height: 353px;
+        left: 21.5%;
+        top: 37.5%;
+        z-index: 10;
+    }
+    &__man-hand {
+        position: absolute;
+        background: url(../img/animation/man-hand.png) no-repeat;
+        width: 89px;
+        height: 128px;
+        left: 10%;
+        top: -10%;
+        z-index: 1;
+        transform: translate(15px, -30px) rotate(150deg);
+        transform-origin: left bottom;
+        animation: hand-up 15s ease 15s forwards;
+        animation-iteration-count: infinite;
+    }
+    &__man-message {
+        position: absolute;
+        background: url(../img/animation/man-message.png) no-repeat;
+        width: 160px;
+        height: 77px;
+        left: 20.5%;
+        top: 24%;
+        z-index: 11;
+        opacity: 0;
+        animation: man-message 10s ease 55s;
+        animation-iteration-count: infinite;
+    }
+}
+@keyframes clouds {
+    0% {
+        transform: translateX(200%);      
+      }
+    100% {
+        transform: translateX(0%);      
+      }
+  }
+
+@keyframes cars-move {
+    0% {
+        transform: translateX(-600%);    
+      }
+
+    100% {
+      transform: translateX(600%);    
+    }
+  }
+
+@keyframes woman-message {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes woman-hand {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-45deg);    
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes man-message {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;  
+    }
+    40% {
+        opacity: 0;  
+    }
+    100% {
+        opacity: 0;  
+    }
+}
+
+@keyframes hand-up {
+    0% {
+        transform: translate(15px, -30px) rotate(150deg);
+    }
+    20% {
+        transform: translate(15px, -30px) rotate(150deg);
+    }
+    30% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    40% {
+        transform: translate(15px, -30px) rotate(150deg);
+    }
+    100% {
+        transform: translate(15px, -30px) rotate(150deg);
+    }
+}
+
+@keyframes taxi {
+    0% {
+        transform: translateX(200%);
+    }
+    35% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-600%);    
+    }
+}
+
+  @keyframes taxi-message {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
