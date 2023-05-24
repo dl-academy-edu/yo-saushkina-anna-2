@@ -10,10 +10,10 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <script>
+    <!-- <script>
       var docElement = document.documentElement;
       docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
-    </script>
+    </script> -->
 
     <!-- Favicon -->
 
@@ -31,45 +31,44 @@
         "active-second-page": "breadcrumbs__item--active-page",
         "second-link": "",
       })
-        <section class="category-products catalog container">
-            <h2 class="visually-hidden">products</h2>
-            <ul class="category-products__list catalog__left-line">
-                @@include('blocks/product.html',{
-                    "img": "img/apparel-kids.jpg",
-                    "text": "apparel kids",
-                    "alt": "APPAREL KIDS",
-                    "modify": "apparel",
-                  })
-                  @@include('blocks/product.html',{
-                    "img": "img/holiday-shop.jpg",
-                    "text": "HOLIDAY SHOP",
-                    "alt": "holiday shop",
-                    "modify": "holiday",
-                  })
-                  @@include('blocks/product.html',{
-                    "img": "img/toys.png",
-                    "text": "TOYS",
-                    "alt": "toys",
-                    "modify": "toys",
-                    "link": "../toys.html",
-                  })
+      <section class="category-products catalog container">
+          <h2 class="visually-hidden">products</h2>
+          <ul class="category-products__list catalog__left-line">
+            @@include('blocks/product.html',{
+              "modify": "apparel",
+              "img": "apparel-kids",
+              "text": "APPAREL KIDS",
+              "alt": "apparel kids",
+            })
+            @@include('blocks/product.html',{
+              "modify": "holiday",
+              "img": "holiday-shop",
+              "text": "HOLIDAY SHOP",
+              "alt": "holiday shop",
+            })
+            @@include('blocks/product.html',{
+              "modify": "toys",
+              "img": "toys",
+              "text": "TOYS",
+              "alt": "toys",
+            })
             </ul>
             <ul class="category-products__list catalog__right-line">
-                @@include('blocks/product.html',{
-                    "img": "img/accessories.jpg",
-                    "text": "ACCESSORIES",
-                    "alt": "accessories",
-                    "modify": "accessories",
-                  })
+              @@include('blocks/product.html',{
+                "modify": "accessories",
+                "img": "accessories",
+                "text": "accessories",
+                "alt": "accessories",
+              })
+              @@include('blocks/product.html',{
+                "modify": "sale",
+                "img": "sale",
+                "text": "sale",
+                "alt": "sale",
+              })   
                   @@include('blocks/product.html',{
-                    "img": "img/sale.jpg",
-                    "text": "sale",
-                    "alt": "sale",
-                    "modify": "sale",
-                  })
-                  @@include('blocks/product.html',{
-                    "img": "img/apparel-adults.jpg",
-                    "text": "ACCESSORIES",
+                    "img": "apparel-adults",
+                    "text": "apparel adults",
                     "alt": "apparel adults",
                     "modify": "adults",
                   })

@@ -1,14 +1,11 @@
 .container {
   max-width: 1180px;
   margin: 0 auto;
-
   @media (max-width: $media-tablet) {
-    max-width: 648px;
-  }
-  @media (max-width: $media-mobile-landscape) {
-    max-width: 375px;
+    margin-left: 60px;
+  //  width: 648px;
   }
   @media (max-width: $media-mobile) {
-    max-width: 336px;
+    // min-width: max-content;
   }
 }
