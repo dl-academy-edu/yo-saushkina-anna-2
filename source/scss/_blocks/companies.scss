@@ -1,13 +1,81 @@
 .companies {
+    @media (max-width: $media-mobile) {
+     
+        margin-bottom: 115px;
+        
+        }
     &__list {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;  
         justify-content: space-between;
-    margin: 0 0;
+        align-items: center;
+        margin-bottom: 76px;
+        margin-top: 90px;
+        gap: 5%;
+        @media (max-width: $media-tablet) {
+            flex-flow: row wrap;
+            margin-bottom: 64px;
+            // justify-content: space-around;
+            }
+        @media (max-width: $media-mobile-landscape) {
+            justify-content: space-around;
+             }
+            @media (max-width: $media-mobile) {
+            flex-wrap: wrap;
+            flex-direction: row;  
+            margin-top: 65px;
+            // margin-bottom: 68px;
+            max-width: max-content;
+            margin-left: 27px;
+            margin-right: 30px;
+            // justify-content: center;
+        }
     }
+    &__list-item:nth-child(1){
+        @media (max-width: $media-mobile) {
+            order: 3;
+            }
+    }
+    &__list-item:nth-child(2){
+        @media (max-width: $media-mobile) {
+            order: 1;
+            }
+    }
+    &__list-item:nth-child(3){
+        @media (max-width: $media-mobile) {
+            order: -1;
+            }
+    }
+    &__list-item:nth-child(4){
+        @media (max-width: $media-mobile) {
+            order: 4;
+            }
+    }
+    &__list-item {
+        // min-width: 230px;
+        padding-bottom: 40px;
+            // object-fit: contain;
+            width: max-content;
+            @media (max-width: $media-tablet) {
+                margin-top: 47px;
+        }
+        @media (max-width: $media-mobile) {
+            // margin-right: 40px;
+            margin-bottom: -56px
+        }     
+        }
     &__list-img {
         transition: 0.4s;
+        margin: 0 0;
+        @media (max-width: $media-tablet) {
+            max-width: 115px;
+            max-height: 33px;
+        }
+        @media (max-width: $media-mobile) {
+            max-height: 38px;
+            max-width: 146px;
+        }     
     }
     &__list-img:hover {
         cursor: pointer;
@@ -16,8 +84,7 @@
     &__list-img:active {
         opacity: 0.5;
     }
-    &__list-item {
-        min-width: 230px;
-        padding-bottom: 40px;
+        &__header {
+        display: none;
     }
 }

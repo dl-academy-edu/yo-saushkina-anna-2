@@ -8,7 +8,8 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #1E0606;
-  }
+}
+
 a {
   list-style: none;
   text-decoration: none;
@@ -22,17 +23,26 @@ li {
 }
 img {
   display: block;
-  max-width: 100%;
+  @media (max-width: $media-tablet) {
+    margin-left: 0;
+  }
+  // max-width: 100%;
 }
 .flex-wrapper {
   display: flex;
+
   @media (max-width: $media-tablet) {
+    // flex-wrap: wrap;
 
   }
   @media (max-width: $media-mobile-landscape) {
-    flex-direction: column;
-  }
+    flex-wrap: wrap;
+   }
+   @media (max-width: 600px) {
+    flex-wrap: wrap;
+   }
   @media (max-width: $media-mobile) {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
