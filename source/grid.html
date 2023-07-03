@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Grid</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script> -->
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+<body>
+    @@include('blocks/header.html')
+    <main>
+        @@include('blocks/breadcrumbs.html',{
+            "header": "Grid",
+            "active-name": "Grid",
+            "active-link": "/grid.html",
+            "active-second-page": "breadcrumbs__item--active-page",
+            "second-link": "",
+          })
+          <section class="grid-section">
+            <ul class="grid">
+                <li class="grid__item item-phone-text">
+                  <div class="item-phone-text__wrapper">
+                    <p class="grid__header item-phone-text__header-position">IPHONE 6S</p>
+                    <p class="grid__text item-phone-text__text-position">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+                    <p class="grid__desc item-phone-text__desc-position">Learn more or visit an Apple Store today</p>
+                  </div>
+                </li>
+                <li class="grid__item item-phone">
+                  <picture>
+                    <source srcset="./img/block-1.jpg, ./img/block-1-2x.jpg 2x">
+                    <img class="grid__img item-phone__img-position" src="./img/block-1.jpg" alt="">
+                  </picture>
+                </li>
+                <li class="grid__item item-how-to-use">
+                  <div class="item-how-to-use__wrapper">
+                    <a href="#" class="grid__header item-how-to-use__header">LEARN MORE</a>
+                    <p class="item-how-to-use__text">How to Use Rotary Evaporator in Chemical Labs</p>
+                    <a href="#" class="grid__link item-how-to-use__link">Download now</a>
+                  </div>
+                </li>
+                <li class="grid__item item-keyboard">
+                  <picture>
+                    <source srcset="./img/block-3.jpg, ./img/block-3-2x.jpg 2x">
+                    <img class="grid__img item-keyboard__img-position" src="./img/block-3.jpg" alt="">
+                  </picture>
+                  <p class="grid__text item-keyboard__text-style">Our Brand New Keyboard</p>
+                  <a href="#" class="grid__header item-keyboard__link">LEARN › </a>
+                </li>
+                <li class="grid__item item-screen">
+                  <div class="item-screen__wrapper">
+                    <p class="grid__header item-screen__header-style">IMAC.RETINA</p>
+                    <p class="grid__text item-screen__text-style">Hardly a month passes these days where</p>
+                  </div>
+                  <picture>
+                    <source srcset="./img/block-4.jpg, ./img/block-4-2x.jpg 2x">
+                    <img class="grid__img item-screen__img" src="./img/block-4.jpg" alt="">
+                  </picture>
+                </li>
+                <li class="grid__item item-screen-text">
+                  <div class="item-screen-text__wrapper">
+                    <p class="grid__desc item-screen-text__text-position">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+                    <a href="#" class="grid__link">DOWNLOAD NOW › </a>
+                  </div>
+                </li>
+                <li class="grid__item item-i-cloud">
+                  <div class="item-i-cloud__wrapper">
+                    <picture>
+                      <source srcset="./img/block-5.jpg, ./img/block-5-2x.jpg 2x">
+                      <img class="grid__img item-i-cloud__img" src="./img/block-5.jpg" alt="">
+                    </picture>
+                    <p class="grid__text item-i-cloud__text">iCloud</p>
+                    <p class="grid__desc item-i-cloud__text-style">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+                    <a href="#" class="grid__header item-i-cloud__btn-link grid__link">LEARN MORE</a>
+                  </div>
+                </li>
+                <li class="grid__item item-best-choice">
+                    <p class="item-best-choice__label">BEST CHOICE</p>
+                    <div class="item-best-choice__wrapper item-best-choice__text">
+                      <p class="grid__text item-best-choice__text-style">Much MuchBetter Experience</p>
+                      <picture>
+                        <source srcset="./img/block-6.jpg, ./img/block-6-2x.jpg 2x">
+                        <img class="grid__img" src="./img/block-6.jpg" alt="">
+                      </picture>
+                    </div>
+                </li>
+                <li class="grid__item item-games-ourpasion">
+                  <div class="item-games-ourpasion__wrapper">
+                    <picture>
+                      <source srcset="./img/block-7.jpg, ./img/block-7-2x.jpg 2x">
+                      <img class="grid__img" src="./img/block-7.jpg" alt="">
+                    </picture>
+                      <p class="grid__text item-games-ourpasion__text-position">Games ourpasion</p>
+                      <a href="#" class="item-games-ourpasion__link">LEARN › </a>
+                  </div>
+                </li>
+                <li class="grid__item item-tv">
+                  <picture class="grid__img item-tv__img">
+                    <source srcset="./img/block-9.jpg, ./img/block-9-2x.jpg 2x">
+                    <img src="./img/block-9.jpg" alt="">
+                  </picture>
+                  <p class="grid__text item-tv__text">More than just a display,  it’s a vision</p>
+                </li>
+                <li class="grid__item item-folow-me">
+                  <div class="item-folow-me__wrapper">
+                    <picture>
+                      <source srcset="./img/block-10.jpg, ./img/block-10-2x.jpg 2x">
+                      <img src="./img/block-10.jpg" alt="">
+                    </picture>
+                    <a href="#" class="grid__text item-folow-me__link">Follow me › </a>
+                  </div>
+                </li>
+              </ul>
+          </section>
+    </main>
+    @@include('blocks/footer.html')
+</body>
+</html>

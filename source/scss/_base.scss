@@ -23,14 +23,26 @@ li {
 }
 img {
   display: block;
-  max-width: 100%;
+  @media (max-width: $media-tablet) {
+    margin-left: 0;
+  }
+  // max-width: 100%;
 }
 .flex-wrapper {
   display: flex;
+
   @media (max-width: $media-tablet) {
-    // max-width: 100%;
+    // flex-wrap: wrap;
+
   }
+  @media (max-width: $media-mobile-landscape) {
+    flex-wrap: wrap;
+   }
+   @media (max-width: 600px) {
+    flex-wrap: wrap;
+   }
   @media (max-width: $media-mobile) {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }

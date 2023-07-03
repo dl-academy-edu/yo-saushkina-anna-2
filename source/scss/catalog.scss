@@ -1,9 +1,19 @@
 .catalog {
     &__left-line {
         margin-right: 300px;
+        // overflow: visible;
+        @media (max-width: $media-tablet) {
+            margin-right: 0px;
+            // overflow: visible;
+         }
     }
     &__right-line {
         margin: 24px 100px 0 200px; 
+        // overflow: visible;
+        @media (max-width: $media-tablet) {
+            margin-left: 0px;
+
+         }
     } 
 &__product-desc {
     max-width: 680px;

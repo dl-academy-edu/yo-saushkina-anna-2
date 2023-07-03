@@ -23,8 +23,8 @@
   </head>
   <body>
     @@include('blocks/header.html')
-    <main>
-      <section class="banner container">
+    <main class="container">
+      <section class="banner ">
         <h2 class="visually-hidden">banner</h2>
         <div class="banner-content">
             <p class="banner-content__header">Slider</p>
@@ -40,7 +40,7 @@
             <div class="banner-text">
                 <h1 class="banner-text__title">THE OOH NOO COLLECTION</h1>
                 <p class="banner-text__subtitle">Designed in Slovenia</p>
-                <button class="link-btn btn__js" type="button" aria-label="open modal window">EXPLORE NOW</button>
+                <button class="banner-text__btn link-btn btn__js" type="button" aria-label="open modal window">EXPLORE NOW</button>
             </div>
             <picture>
               <source srcset="./img/monster-tablet.png" media=" (max-width: 1100px)">
@@ -50,7 +50,7 @@
         </div>
         <p class="banner__subtitle">Free (continental) USA shipping on all orders of $100 USD or more!</p>
     </section>
-      <section class="category-products container">
+      <section class="category-products">
         <h2 class="category-products__header header-style">Category Products</h2>
         <ul class="category-products__list container">
           @@include('blocks/product.html',{
@@ -84,13 +84,13 @@
               <p class="navigation__text">Modern finds for the modern home. Curated goods by unique designers around the world from fashion to furniture for kids and adults.</p>
           </div>
       </section>
-      <section class="delivery container">
+      <section class="delivery">
           <h2 class="visually-hidden">delivery</h2>
           <picture class="delivery__img">
             <source srcset="./img/delivery-woman-mobile.jpg, ./img/delivery-woman-mobile-2x.jpg 2x" media="(max-width: 425px)">
             <source srcset="./img/delivery-woman-tablet.jpg, ./img/delivery-woman-tablet-2x.jpg 2x" media="(min-width: 426px) and (max-width: 768px)">
             <source srcset="./img/delivery-woman.jpg, ./img/delivery-woman-2x.jpg 2x" media="(min-width: 769px)">
-            <img src="./img/delivery-woman.jpg" alt="delivery woman" >
+            <img src="./img/delivery-woman.jpg" alt="delivery woman">
         </picture>
         <div class="delivery__info">
             <h3 class="delivery__header header-style">Delivery</h3>
@@ -104,50 +104,43 @@
             <a class="delivery__link link-btn" href="#" aria-label="open delivery page">LEARN MORE</a>
         </div>
       </section>
-          <section class="companies container">
+          <section class="companies">
               <h2 class="companies__header">Awards</h2>
               <ul class="companies__list">
+
                 @@include('blocks/companies.html',{
                   "link": "https://mail.ru/",
                   "webpage": "mail.ru",
-                  "img": "mail-ru-group-logo.png",
+                  "company": "mail-ru-logo",
                   "alt": "mail.ru group",
-                  "width": "193",
-                  "height": "60",
                 })
                 @@include('blocks/companies.html',{
                   "link": "https://www.apple.com/ru/",
                   "webpage": "apple.com",
-                  "img": "apple-logo.png",
+                  "company": "apple-logo",
                   "alt": "apple",
-                  "width": "179",
-                  "height": "61",
                 })   
                 @@include('blocks/companies.html',{
                   "link": "https://eltex-co.ru/",
                   "webpage": "eltex-co",
-                  "img": "eltex-logo.png",
+                  "company": "eltex-logo",
                   "alt": "eltex",
-                  "width": "216",
-                  "height": "46",
                 })  
                 @@include('blocks/companies.html',{
                   "link": "https://www.owox.com/",
                   "webpage": "owox.com",
-                  "img": "owox-logo.png",
+                  "company": "owox-logo",
                   "alt": "owox",
-                  "width": "211",
-                  "height": "40",
                 })
               </ul>
           </section>
-      <div class="container flex-wrapper">
-          <section class="buy-now">
+      <section class="flex-wrapper">
+          <div class="buy-now">
               <h2 class="buy-now__header header-style">Design Life Kids</h2>
               <p class="buy-now__subtitle">About Us</p>
               <p class="buy-now__desc">Some days i feel likeh i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
               <a class="link-btn buy-now__button" href="#" aria-label="open buying page">buy now</a>
-          </section>
+          </div>
           <article class="contacts">
                   <h2 class="contacts__header header-style">contacts</h2>
                   <p class="contacts__text">Some days i feel like i've been working on dlk my entire life and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
@@ -156,7 +149,7 @@
                   loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                   </iframe>
           </article>
-      </div>
+        </section>
   </main>
       @@include('blocks/footer.html')
       <div class="popup">
@@ -167,6 +160,6 @@
         <div class="popup__overlay"></div>
     </div>
     <script src="js/app.js" defer></script>
-    <script src="js/popup.js" defer></script>
+    <script src="js/popup.js" defer></script> 
   </body>
 </html>

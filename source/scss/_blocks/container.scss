@@ -2,10 +2,13 @@
   max-width: 1180px;
   margin: 0 auto;
   @media (max-width: $media-tablet) {
-    margin-left: 60px;
-  //  width: 648px;
+    margin: 0 40px 0 60px;
+  }
+  @media (max-width: 600px) {
+    margin: 0 -11px 0 1px;
   }
   @media (max-width: $media-mobile) {
-    // min-width: max-content;
+    margin: 0 -11px 0 1px;
+
   }
 }

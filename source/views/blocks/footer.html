@@ -1,9 +1,10 @@
-<footer class="footer ">
-  <div class="footer__wrapper container flex-wrapper">
+<footer class="footer">
+  <div class="footer__wrapper flex-wrapper container">
       <section class="footer__column">
           <h2 class="footer__column-header">Navigation</h2>
-          <ul class="footer__column-list">
-            @@include('blocks/footer-item.html',{
+          <nav class="footer__column-list">
+            <ul class="footer__column-left">
+              @@include('blocks/footer-item.html',{
                 "text": "About Us",
               })
             @@include('blocks/footer-item.html',{
@@ -12,20 +13,24 @@
             @@include('blocks/footer-item.html',{
                 "text": "Design Services",
               })
-            @@include('blocks/footer-item.html',{
-                "text": "Featured On",
-              })
-            @@include('blocks/footer-item.html',{
-                "text": "2018 Holiday Catalog",
-              })
-            @@include('blocks/footer-item.html',{
-                "text": "Shop By Designer",
-              })
-          </ul>
+            </ul>
+              <ul class="footer__column-right footer__column-right--padding">
+                @@include('blocks/footer-item.html',{
+                  "text": "Featured On",
+                })
+              @@include('blocks/footer-item.html',{
+                  "text": "2018 Holiday Catalog",
+                })
+              @@include('blocks/footer-item.html',{
+                  "text": "Shop By Designer",
+                })
+              </ul>
+          </nav>
       </section>
       <section class="footer__column">
           <h2 class="footer__column-header">Customer Information</h2>
-          <ul class="footer__column-list">
+          <nav class="footer__column-list">
+            <ul class="footer__column-left">
             @@include('blocks/footer-item.html',{
                 "text": "Contact Us",
               })
@@ -35,6 +40,8 @@
             @@include('blocks/footer-item.html',{
                 "text": "Shipping & Returns",
               })
+            </ul>
+            <ul class="footer__column-right">
             @@include('blocks/footer-item.html',{
                 "text": "Terms & Conditions",
               })
@@ -44,10 +51,11 @@
             @@include('blocks/footer-item.html',{
                 "text": "Search",
               })
-          </ul>
+            </ul>
+          </nav>
       </section>
-      <section class="footer__column footer__connect">
-          <h2 class="footer__column-header">Connect</h2>
+      <section class="footer__column connect">
+          <h2 class="footer__column-header connect__header">Connect</h2>
           <form class="footer__connect-form" action="#">
               <input class="footer__email" type="email" placeholder="Email" aria-label="enter email">
               <button class="footer__email-button link-btn" type="submit" aria-label="submit email data">Join</button>
